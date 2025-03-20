@@ -1,0 +1,115 @@
+@use "../utils/_colors.scss" as c;
+
+.header {
+    position: fixed;
+    // top: 15px;
+    left: 50%;
+    transform: translate(-50%, 0);
+
+    transition: all 0.5s;
+
+    z-index: 10;
+
+    width: 100%;
+
+    padding: 20px 0 20px 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    // padding-top: 15px;
+    // padding-bottom: 10px;
+
+    &-blur {
+        background: #00000025;
+        backdrop-filter: blur(5px);
+        -webkit-backdrop-filter: blur(5px);
+
+        border-bottom: 1px solid c.$border;
+
+        padding: 10px 0 10px 0;
+    }
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &__logo {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+
+        transition: all 0.3s ease-in-out;
+
+        & span {
+            color: c.$accent-text;
+            font-weight: 700;
+            font-size: 1.5rem;
+        }
+    }
+    & .hlogo {
+        border-radius: 10px;
+    }
+
+    &__nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 75px;
+    }
+
+    &__nav ul {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        list-style: none;
+
+        gap: 25px;
+    }
+    &__nav ul li a {
+        font-family: "Roboto", sans-serif;
+        font-size: 1.1rem;
+
+        text-decoration: none;
+
+        color: c.$text;
+
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        transition: color 0.3s ease;
+
+        &::after {
+            content: "";
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translate(-50%);
+            width: 70%;
+            height: 2px;
+            opacity: 0;
+            background: c.$text;
+
+            transition: all 0.3s ease;
+        }
+
+        &:hover::after {
+            width: 70%;
+            height: 2px;
+            opacity: 1;
+            bottom: -5px;
+        }
+    }
+
+    &__discord img {
+        width: 40px;
+        height: 40px;
+    }
+}

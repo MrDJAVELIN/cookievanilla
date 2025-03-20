@@ -1,0 +1,232 @@
+@media (max-width: 1200px) {
+    html {
+        font-size: 15px;
+    }
+
+    .container {
+        max-width: 800px;
+    }
+
+    .header-content {
+        &__nav ul {
+            gap: 15px;
+        }
+
+        &__logo {
+            & img {
+                width: 45px;
+                height: 45px;
+            }
+            & span {
+                font-size: 1.4rem;
+            }
+        }
+    }
+
+    .season {
+        flex-basis: calc((100% - 150px) / 3);
+    }
+
+    .hero {
+        &__left {
+            & p {
+                width: 500px;
+            }
+        }
+    }
+
+    .footer__left p {
+        width: 400px;
+    }
+}
+@media (min-width: 830px) {
+    #menubtn {
+        display: none;
+    }
+}
+
+@media (max-width: 830px) {
+    html {
+        font-size: 13px;
+    }
+
+    .container {
+        max-width: 600px;
+    }
+
+    #menubtn {
+        display: flex;
+    }
+
+    .header-content {
+        &__nav {
+            display: none;
+        }
+
+        &__logo {
+            & img {
+                width: 45px;
+                height: 45px;
+            }
+            & span {
+                font-size: 1.4rem;
+            }
+        }
+    }
+
+    .season {
+        flex-basis: calc((100% - 10px) / 2);
+    }
+
+    .hero {
+        padding-top: 0;
+
+        &__content,
+        &__left {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        & .playerlist {
+            display: none;
+        }
+
+        &__left {
+            & p {
+                width: 500px;
+            }
+        }
+    }
+
+    .faq-answer p {
+        font-size: 1.3rem;
+    }
+
+    .footer__left p {
+        width: 320px;
+    }
+}
+
+@media (max-width: 630px) {
+    html {
+        font-size: 13px;
+    }
+
+    .header-content {
+        &__logo {
+            & img {
+                width: 45px;
+                height: 45px;
+            }
+            & span {
+                font-size: 1.4rem;
+            }
+        }
+    }
+
+    .container {
+        max-width: 400px;
+    }
+
+    .season {
+        flex-basis: calc((100% - 10px) / 2);
+    }
+
+    .hero {
+        padding-top: 0;
+
+        &__content,
+        &__left {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        & .playerlist {
+            display: none;
+        }
+
+        &__left {
+            & p {
+                width: 400px;
+            }
+        }
+    }
+
+    .faq-answer p {
+        font-size: 1.3rem;
+    }
+
+    .footer__left p {
+        width: 320px;
+    }
+
+    .footer__badges {
+        display: none;
+    }
+}
+@media (max-width: 445px) {
+    html {
+        font-size: 13px;
+    }
+
+    .header-content {
+        &__logo {
+            & img {
+                width: 45px;
+                height: 45px;
+            }
+            & span {
+                font-size: 1.4rem;
+            }
+        }
+    }
+
+    .container {
+        max-width: 340px;
+    }
+
+    .season {
+        flex-basis: calc((100% - 100px) / 1);
+    }
+
+    .hero {
+        padding-top: 0;
+
+        &__content,
+        &__left {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        & .playerlist {
+            display: none;
+        }
+
+        &__left {
+            & p {
+                width: 300px;
+            }
+        }
+    }
+    #zayavkaIcon {
+        display: none;
+    }
+
+    .faq-answer p {
+        font-size: 1.3rem;
+    }
+
+    .footer__left p {
+        width: 300px;
+    }
+
+    .footer__badges {
+        display: none;
+    }
+}

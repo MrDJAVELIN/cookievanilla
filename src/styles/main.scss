@@ -1,0 +1,253 @@
+@use "./utils/_colors.scss" as c;
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+@import url(components/_header.scss);
+@import url(components/_sections.scss);
+@import url(components/_footer.scss);
+@import url(components/_media.scss);
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+*::selection {
+    background: c.$accent-red-transparent;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+    background: #000;
+}
+
+::-webkit-scrollbar-thumb {
+    width: 5px;
+
+    background: c.$accent-red;
+    border-radius: 10px;
+}
+
+body {
+    height: 100vh;
+
+    background: c.$background;
+
+    color: c.$text;
+
+    overflow-x: hidden;
+}
+
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#root {
+    position: relative;
+}
+
+.container {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.backdrop {
+    width: 100vw;
+    height: 100vh;
+
+    position: fixed;
+
+    background: #00000050;
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    z-index: 100;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #00000090;
+    padding: 20px 30px;
+    border: 1px solid c.$border;
+    border-radius: 10px;
+
+    &__line {
+        width: 100%;
+        height: 2px;
+        background: #fff;
+        margin: 10px 0;
+    }
+
+    & ul {
+        list-style: none;
+
+        display: flex;
+        align-items: start;
+        justify-content: center;
+        flex-direction: column;
+        gap: 8px;
+
+        & li {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        & li a {
+            color: c.$text;
+
+            font-size: 1.8rem;
+        }
+    }
+}
+
+.shadow {
+    filter: drop-shadow(0px 2px 15px #00000075);
+}
+
+.thovered {
+    transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
+
+    &:hover {
+        transform: scale(1.05);
+    }
+    &:active {
+        transform: scale(1);
+    }
+}
+
+.btn {
+    padding: 8px 15px;
+    font-size: 1.2rem;
+    font-weight: 700;
+    font-family: "Poppins", sans-serif;
+    background: c.$accent-red;
+    border: 1px solid c.$border;
+    outline: none;
+    color: c.$text;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 10px;
+
+    border-radius: 10px;
+
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+
+    &:hover {
+        background: c.$accent-red-transparent;
+        color: c.$text;
+
+        border: 1px solid c.$accent-red;
+    }
+    &:active {
+        background: c.$accent-red-transparent;
+        transform: scale(1);
+    }
+}
+
+.lbtn {
+    @extend .btn;
+    background: #00000030;
+    border: 1px solid c.$border;
+    color: c.$text;
+    &:hover {
+        background: #55555560;
+        color: c.$accent-text;
+        border: 1px solid c.$border-hover;
+    }
+    &:active {
+        background: #00000050;
+        transform: scale(1);
+    }
+}
+
+.hover-animation {
+    position: relative;
+
+    &::before {
+        content: "";
+        width: 0%;
+        height: 50%;
+
+        background: c.$accent-red-transparent;
+
+        border: 1px solid c.$red;
+        border-bottom: none;
+        opacity: 0;
+
+        position: absolute;
+
+        right: 0px;
+        top: 0;
+
+        z-index: -1;
+
+        transition: all 0.3s ease;
+
+        border-radius: 5px 10px 0 0;
+    }
+    &:hover::before {
+        width: 100%;
+        height: 50%;
+        opacity: 1;
+    }
+
+    &::after {
+        content: "";
+        width: 0%;
+        height: 50%;
+
+        background: c.$accent-red-transparent;
+
+        border: 1px solid c.$red;
+        border-top: none;
+        opacity: 0;
+
+        position: absolute;
+
+        left: 0px;
+        bottom: 0;
+
+        z-index: -1;
+
+        transition: all 0.3s ease;
+
+        border-radius: 0 0 5px 10px;
+    }
+    &:hover::after {
+        width: 100%;
+        height: 50%;
+        opacity: 1;
+    }
+}
+
+.red-border {
+    background: c.$accent-red-transparent;
+    border-radius: 5px 10px;
+    padding: 5px 8px;
+    border: 1px solid c.$red;
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+}
+
+a {
+    text-decoration: none;
+}
