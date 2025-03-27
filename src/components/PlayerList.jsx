@@ -26,9 +26,10 @@ const PlayerList = () => {
     return (
         <div className="playerlist thovered">
             <h3>
-                Игроки:
+                Игроки на сервере:
                 <span className="playerlist__online">
-                    {stats?.players?.online}/{stats?.players?.max}
+                    {stats?.players?.online != "" ? stats?.players?.online : 0}/
+                    {stats?.players?.max}
                     <Users strokeWidth={2} />
                 </span>
             </h3>
@@ -48,7 +49,11 @@ const PlayerList = () => {
                         )
                     )
                 ) : (
-                    <li>Сервер пуст...</li>
+                    <li>
+                        {stats?.players?.online == 0
+                            ? "Сервер пуст."
+                            : "Загрузка..."}
+                    </li>
                 )}
             </ul>
         </div>
