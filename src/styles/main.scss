@@ -13,7 +13,7 @@
     box-sizing: border-box;
 }
 *::selection {
-    background: c.$accent-red-transparent;
+    background: #ff0000aa;
 }
 
 ::-webkit-scrollbar {
@@ -43,6 +43,7 @@ main {
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    gap: 30px;
 }
 
 #root {

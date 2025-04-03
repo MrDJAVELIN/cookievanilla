@@ -43,7 +43,6 @@ const Footer = () => {
                         Developed by
                         <img src={djavelin} width={110} />
                     </a>
-                    <span className="soroksim">#47</span>
                 </div>
             </div>
         </footer>

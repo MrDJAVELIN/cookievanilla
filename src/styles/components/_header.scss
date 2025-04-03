@@ -77,7 +77,7 @@
 
         text-decoration: none;
 
-        color: c.$text;
+        color: c.$accent_text;
 
         position: relative;
         display: flex;
@@ -85,6 +85,10 @@
         justify-content: center;
 
         transition: color 0.3s ease;
+
+        &:hover {
+            color: c.$accent-text;
+        }
 
         &::after {
             content: "";

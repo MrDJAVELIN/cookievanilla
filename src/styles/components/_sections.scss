@@ -9,7 +9,7 @@
 .hero {
     background: linear-gradient(0deg, c.$background 0%, #ffffff00 50%) center /
             cover no-repeat,
-        url(../../assets/bg3.jpg) center / cover no-repeat;
+        url(../../assets/bg4.webp) 50% 50% / cover no-repeat;
 
     padding: 70px 0;
     position: relative;
@@ -34,15 +34,35 @@
         gap: 40px;
     }
 
-    &__title {
-        font-size: 2.4rem;
-
+    &__titles {
         display: flex;
-        align-items: center;
+        align-items: start;
         justify-content: center;
-        gap: 20px;
+        flex-direction: column;
+        gap: 10px;
 
-        color: c.$accent-text;
+        &__title {
+            font-size: 2.4rem;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+
+            color: c.$accent-text;
+        }
+
+        &__season {
+            font-size: 1.6rem;
+            font-weight: 700;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+
+            color: c.$accent-text;
+        }
     }
 
     &__description {
@@ -181,7 +201,7 @@
         padding: 20px 10px 15px 20px;
         opacity: 1;
         top: 0;
-        max-height: 150px;
+        max-height: 250px;
     }
 
     &-answer {

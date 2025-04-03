@@ -1,13 +1,18 @@
 import React, { useState, useEffect } from "react";
 import Logo from "../components/Logo";
 import Button from "../components/Button";
-import { Clipboard, Cookie, Copy, ExternalLink, Users } from "lucide-react";
+import {
+    CalendarClock,
+    Clipboard,
+    Cookie,
+    Copy,
+    ExternalLink,
+    Users,
+} from "lucide-react";
 import PlayerList from "../components/PlayerList";
 import EmptyButton from "../components/EmptyButton";
 import axios from "axios";
 import Faq from "../components/Faq";
-
-import bg from "../assets/bg3.jpg";
 
 const Home = () => {
     const [stats, setStats] = useState(null);
@@ -45,10 +50,16 @@ const Home = () => {
                 <section className="hero">
                     <div className="hero__content container">
                         <div className="hero__left">
-                            <h1 className="hero__title shadow">
-                                <Cookie width={30} height={30} />
-                                Cookie Vanilla
-                            </h1>
+                            <div className="hero__titles shadow">
+                                <h1 className="hero__titles__title">
+                                    <Cookie width={30} height={30} />
+                                    Cookie Vanilla
+                                </h1>
+                                <span className="hero__titles__season">
+                                    <CalendarClock width={25} height={25} /> 6
+                                    SEASON
+                                </span>
+                            </div>
                             <p className="hero__description shadow">
                                 — приватный ванильный
                                 <b> RolePlay</b> сервер minecraft с крутыми
@@ -69,7 +80,12 @@ const Home = () => {
                                 <a href="https://discord.gg/8FGHHKsphg">
                                     <EmptyButton
                                         text="Подать Заявку"
-                                        icon={<ExternalLink width={24} id="zayavkaIcon"/>}
+                                        icon={
+                                            <ExternalLink
+                                                width={24}
+                                                id="zayavkaIcon"
+                                            />
+                                        }
                                         className="thovered"
                                         link="https://discord.gg/8FGHHKsphg"
                                     />
