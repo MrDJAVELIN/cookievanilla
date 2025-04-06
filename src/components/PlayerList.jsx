@@ -41,11 +41,14 @@ const PlayerList = () => {
                             <li
                                 key={player}
                                 style={{ order: "-1", color: "#fff" }}
+                                title={player}
                             >
-                                {player}
+                                <span>{player}</span>
                             </li>
                         ) : (
-                            <li key={player}>{player}</li>
+                            <li key={player} title={player}>
+                                <span>{player}</span>
+                            </li>
                         )
                     )
                 ) : (

@@ -129,8 +129,16 @@
             color: c.$text;
 
             display: flex;
-            align-items: flex-start;
+            align-items: center;
             justify-content: flex-start;
+
+            & span {
+                max-width: 160px;
+                text-overflow: ellipsis;
+                overflow: hidden;
+                white-space: nowrap;
+                display: inline-block;
+            }
         }
 
         & h3 {
