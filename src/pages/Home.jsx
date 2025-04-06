@@ -56,7 +56,7 @@ const Home = () => {
                                     Cookie Vanilla
                                 </h1>
                                 <span className="hero__titles__season">
-                                    <CalendarClock width={25} height={25} /> 6
+                                    <CalendarClock width={25} height={25} /> 5
                                     SEASON
                                 </span>
                             </div>
