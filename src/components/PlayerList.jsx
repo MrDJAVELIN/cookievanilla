@@ -9,7 +9,7 @@ const PlayerList = () => {
         const fetchStats = async () => {
             try {
                 const res = await axios.get(
-                    "https://api.mcsrvstat.us/2/cookiev.xyz"
+                    "https://api.mcsrvstat.us/2/cookiev.xyz:25565"
                 );
                 setStats(res.data);
             } catch (error) {
