@@ -14,7 +14,7 @@ const Seasons = () => {
             dateStart: "Сентябрь 2023",
             dateEnd: "Ноябрь 2023",
             size: "11.79GB",
-            link: "http://94.156.102.236:25565/BeeHive-1season.zip",
+            link: "http://176.108.240.184:25564/BeeHive-1season.zip",
             icon: bh1,
         },
         {
@@ -22,7 +22,7 @@ const Seasons = () => {
             dateStart: "Ноябрь 2023",
             dateEnd: "Январь 2023",
             size: "5.12GB",
-            link: "http://94.156.102.236:25565/beeh.2-season.zip",
+            link: "http://176.108.240.184:25564/beeh.2-season.zip",
             icon: bh2,
         },
         {
@@ -30,7 +30,7 @@ const Seasons = () => {
             dateStart: "06.04.2024",
             dateEnd: "31.05.2024",
             size: "2.73GB",
-            link: "http://94.156.102.236:25565/cookie-2season.zip",
+            link: "http://176.108.240.184:25564/cookie-2season.zip",
             icon: cv2,
         },
         {
@@ -38,7 +38,7 @@ const Seasons = () => {
             dateStart: "01.08.2024",
             dateEnd: "25.09.2024",
             size: "9.12GB",
-            link: "http://94.156.102.236:25565/cookie-3seasonv2.zip",
+            link: "http://176.108.240.184:25564/cookie-3seasonv2.zip",
             icon: cv3,
         },
         {
@@ -46,7 +46,7 @@ const Seasons = () => {
             dateStart: "28.12.2024",
             dateEnd: "21.01.2025",
             size: "2.94GB",
-            link: "http://94.156.102.236:25565/cookie-4season.zip",
+            link: "http://176.108.240.184:25564/cookie-4season.zip",
             icon: empty,
         },
         {
@@ -54,7 +54,7 @@ const Seasons = () => {
             dateStart: "03.03.2025",
             dateEnd: "04.04.2025",
             size: "???GB",
-            link: "http://94.156.102.236:25565/cookie-5season-dev.zip",
+            link: "http://176.108.240.184:25564/cookie-5season-dev.zip",
             icon: empty,
         },
     ];
