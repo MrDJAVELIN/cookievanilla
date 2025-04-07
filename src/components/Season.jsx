@@ -3,9 +3,6 @@ import EmptyButton from "./EmptyButton";
 import { Download } from "lucide-react";
 
 const Season = ({ name, icon, dateStart, dateEnd, size, link }) => {
-    const fileName = link.split("/").pop();
-    const downloadLink = `/api/download?file=${encodeURIComponent(fileName)}`;
-
     return (
         <>
             <div className="season">
@@ -16,7 +13,7 @@ const Season = ({ name, icon, dateStart, dateEnd, size, link }) => {
                     <span>Конец: {dateEnd}</span>
                     <span>Размер: {size}</span>
                 </div>
-                <a href={downloadLink}>
+                <a href={link} target="_blank" rel="noreferrer">
                     <EmptyButton text="Загрузить" icon={<Download />} />
                 </a>
             </div>
