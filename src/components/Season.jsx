@@ -13,7 +13,7 @@ const Season = ({ name, icon, dateStart, dateEnd, size, link }) => {
                     <span>Конец: {dateEnd}</span>
                     <span>Размер: {size}</span>
                 </div>
-                <a href={link} download>
+                <a href={link} target="_blank" rel="noopener noreferrer">
                     <EmptyButton text="Загрузить" icon={<Download />} />
                 </a>
             </div>
