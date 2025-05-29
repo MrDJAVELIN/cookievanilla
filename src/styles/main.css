@@ -108,7 +108,7 @@ main {
   transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
 }
 .thovered:hover {
-  transform: scale(1.05);
+  transform: scale(1.01);
 }
 .thovered:active {
   transform: scale(1);
@@ -134,12 +134,12 @@ main {
   -webkit-backdrop-filter: blur(3px);
 }
 .btn:hover, .lbtn:hover {
-  background: rgba(189, 21, 21, 0.2509803922);
+  background: rgba(189, 21, 21, 0.4588235294);
   color: #e9e9e9;
-  border: 1px solid #d41717;
+  border: 1px solid #bd1515;
 }
 .btn:active, .lbtn:active {
-  background: rgba(189, 21, 21, 0.2509803922);
+  background: rgba(189, 21, 21, 0.4588235294);
   transform: scale(1);
 }
 
@@ -165,7 +165,7 @@ main {
   content: "";
   width: 0%;
   height: 50%;
-  background: rgba(189, 21, 21, 0.2509803922);
+  background: rgba(189, 21, 21, 0.4588235294);
   border: 1px solid #ff0000;
   border-bottom: none;
   opacity: 0;
@@ -185,7 +185,7 @@ main {
   content: "";
   width: 0%;
   height: 50%;
-  background: rgba(189, 21, 21, 0.2509803922);
+  background: rgba(189, 21, 21, 0.4588235294);
   border: 1px solid #ff0000;
   border-top: none;
   opacity: 0;
@@ -203,12 +203,16 @@ main {
 }
 
 .red-border {
-  background: rgba(189, 21, 21, 0.2509803922);
+  background: rgba(189, 21, 21, 0.4588235294);
   border-radius: 5px 10px;
   padding: 5px 8px;
   border: 1px solid #ff0000;
   backdrop-filter: blur(3px);
   -webkit-backdrop-filter: blur(3px);
+}
+
+.text-shadow {
+  text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3137254902);
 }
 
 a {

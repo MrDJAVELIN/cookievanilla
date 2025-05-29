@@ -122,7 +122,7 @@ main {
     transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
 
     &:hover {
-        transform: scale(1.05);
+        transform: scale(1.01);
     }
     &:active {
         transform: scale(1);
@@ -157,7 +157,8 @@ main {
         background: c.$accent-red-transparent;
         color: c.$text;
 
-        border: 1px solid c.$accent-red;
+        border: 1px solid c.$accent-red-hover;
+        // border: 1px solid #ff000000;
     }
     &:active {
         background: c.$accent-red-transparent;
@@ -248,6 +249,10 @@ main {
     border: 1px solid c.$red;
     backdrop-filter: blur(3px);
     -webkit-backdrop-filter: blur(3px);
+}
+
+.text-shadow {
+    text-shadow: 5px 5px 10px #00000050;
 }
 
 a {

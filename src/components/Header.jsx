@@ -36,9 +36,6 @@ const Header = () => {
                             <li className="thovered">
                                 <a href="/#">Главная</a>
                             </li>
-                            {/* <li className="thovered">
-                                <a href="builds">Постройки</a>
-                            </li> */}
                             <li className="thovered">
                                 <a href="seasons">Сезоны</a>
                             </li>

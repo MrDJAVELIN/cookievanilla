@@ -7,6 +7,7 @@ import {
     Cookie,
     Copy,
     ExternalLink,
+    Sun,
     Users,
 } from "lucide-react";
 import PlayerList from "../components/PlayerList";
@@ -56,8 +57,8 @@ const Home = () => {
                                     Cookie Vanilla
                                 </h1>
                                 <span className="hero__titles__season">
-                                    <CalendarClock width={25} height={25} /> 5
-                                    SEASON
+                                    <CalendarClock width={25} height={25} />{" "}
+                                    ЛЕТНИЙ СЕЗОН
                                 </span>
                             </div>
                             <p className="hero__description shadow">
