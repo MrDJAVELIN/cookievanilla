@@ -5,6 +5,7 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Builds from "./pages/Builds";
 import Seasons from "./pages/Seasons";
+import NotFound from "./pages/notFound";
 
 const App = () => {
     return (
@@ -14,8 +15,8 @@ const App = () => {
             <BrowserRouter>
                 <Routes>
                     <Route path="/" element={<Home />} />
-                    {/* <Route path="/builds" element={<Builds />} /> */}
                     <Route path="/seasons" element={<Seasons />} />
+                    <Route path="*" element={<NotFound />} />
                 </Routes>
             </BrowserRouter>
 

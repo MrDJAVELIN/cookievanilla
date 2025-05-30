@@ -13,7 +13,7 @@
     box-sizing: border-box;
 }
 *::selection {
-    background: #ff0000aa;
+    background: c.$accent-red-transparent;
 }
 
 ::-webkit-scrollbar {
@@ -71,6 +71,17 @@ main {
     justify-content: center;
 
     z-index: 100;
+
+    opacity: 0;
+    pointer-events: none;
+    transform: scale(1.2);
+    transition: all 0.3s ease-in-out;
+}
+
+.open {
+    opacity: 1;
+    transform: scale(1);
+    pointer-events: all;
 }
 
 .menu {
@@ -78,13 +89,13 @@ main {
     align-items: center;
     justify-content: center;
 
-    background: #00000090;
-    padding: 20px 30px;
-    border: 1px solid c.$border;
+    background: c.$background-tr;
+    padding: 20px 40px;
+    border: 1px solid c.$accent-red;
     border-radius: 10px;
 
     &__line {
-        width: 100%;
+        width: 110%;
         height: 2px;
         background: #fff;
         margin: 10px 0;
@@ -94,7 +105,7 @@ main {
         list-style: none;
 
         display: flex;
-        align-items: flex-start;
+        align-items: center;
         justify-content: center;
         flex-direction: column;
         gap: 8px;
@@ -104,6 +115,8 @@ main {
             align-items: center;
             justify-content: center;
             gap: 10px;
+
+            align-self: flex-start;
         }
 
         & li a {

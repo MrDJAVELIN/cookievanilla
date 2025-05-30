@@ -1,10 +1,13 @@
-import { ExternalLink } from "lucide-react";
+import { CloudCog, ExternalLink } from "lucide-react";
 import React from "react";
 
 const BMenu = (props) => {
     return (
         <>
-            <div className="backdrop" onClick={props.closeMenu}>
+            <div
+                className={`backdrop ${props.stat ? "open" : ""}`}
+                onClick={props.closeMenu}
+            >
                 <div className="menu">
                     <ul>
                         <li className="thovered">

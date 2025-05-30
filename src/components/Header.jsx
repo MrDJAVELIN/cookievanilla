@@ -88,7 +88,7 @@ const Header = () => {
                     />
                 </div>
             </header>
-            {openMenu && <BMenu closeMenu={() => setOpenMenu(false)} />}
+            <BMenu stat={openMenu} closeMenu={() => setOpenMenu(false)} />
         </>
     );
 };

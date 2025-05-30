@@ -226,6 +226,10 @@
         max-height: 250px;
     }
 
+    &-active &-icon {
+        transform: rotate(180deg);
+    }
+
     &-answer {
         display: flex;
         align-items: flex-start;
@@ -308,5 +312,19 @@
         & span {
             font-size: 1.2rem;
         }
+    }
+}
+
+.notfound {
+    height: 70vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    & h1 {
+        font-size: 14rem;
+        font-weight: 1000;
     }
 }

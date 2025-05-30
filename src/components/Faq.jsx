@@ -14,7 +14,7 @@ const Faq = ({ question, answer }) => {
                     }}
                 >
                     <span>{question}</span>
-                    <ChevronDown width={30} height={30} />
+                    <ChevronDown className="faq-icon" width={30} height={30} />
                 </div>
                 <div className="faq-answer">
                     <p>— {answer}</p>
