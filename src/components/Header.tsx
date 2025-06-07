@@ -2,7 +2,6 @@
 
 import React, { useEffect, useState } from "react";
 import Logo from "./Logo";
-import discord from "../assets/discord.svg";
 import { Menu, Sun } from "lucide-react";
 import BMenu from "./BMenu";
 import Link from "next/link";
