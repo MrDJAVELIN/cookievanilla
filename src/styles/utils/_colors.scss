@@ -1,0 +1,37 @@
+:root {
+    --red: #ff0000;
+    --accent-red: #d41717;
+    --accent-red-hover: #bd1515;
+    --accent-red-transparent: #bd151575;
+    --gray: #e0e0e0;
+
+    --text: #121212;
+    --sm-text: #333;
+
+    --accent-text: #050505;
+
+    --background: #f1f1f1;
+    --background-tr: #ffffff60;
+
+    --border: #00000030;
+    --border-hover: #00000050;
+}
+
+.dark-theme {
+    --red: #ff0000;
+    --accent-red: #d41717;
+    --accent-red-hover: #bd1515;
+    --accent-red-transparent: #bd151575;
+    --gray: #303030;
+
+    --text: #e9e9e9;
+    --sm-text: #cecece;
+
+    --accent-text: #fff;
+
+    --background: #121212;
+    --background-tr: #12121260;
+
+    --border: #ffffff50;
+    --border-hover: #ffffff75;
+}

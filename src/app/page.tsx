@@ -1,95 +1,116 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+"use client";
+import Logo from "../components/Logo";
+import Button from "../components/Button";
+import {
+    CalendarClock,
+    Clipboard,
+    Cookie,
+    Copy,
+    ExternalLink,
+    Sun,
+    TriangleAlert,
+    Users,
+} from "lucide-react";
+import PlayerList from "../components/PlayerList";
+import EmptyButton from "../components/EmptyButton";
+import Faq from "../components/Faq";
+import Link from "next/link";
 
-export default function Home() {
-  return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol>
-          <li>
-            Get started by editing <code>src/app/page.tsx</code>.
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+const Home = () => {
+    const ip = "cookiev.xyz";
 
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.secondary}
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className={styles.footer}>
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
-  );
-}
+    function copyIp() {
+        var copyText = ip;
+
+        navigator.clipboard.writeText(copyText);
+
+        alert("Copied: " + copyText);
+    }
+
+    return (
+        <>
+            <main>
+                <section className="hero">
+                    <div className="hero__content container">
+                        <div className="hero__left">
+                            <div className="hero__titles">
+                                <h1 className="hero__titles__title">
+                                    <Cookie width={30} height={30} />
+                                    Cookie Vanilla
+                                </h1>
+                                <span className="hero__titles__season">
+                                    <CalendarClock width={25} height={25} />{" "}
+                                    ЛЕТНИЙ СЕЗОН
+                                </span>
+                            </div>
+                            <p className="hero__description">
+                                — приватный ванильный RolePlay сервер minecraft
+                                с крутыми фишками, которые не портят ванильное
+                                выживание. Сервер основан на дружеском и конечно
+                                же классическом выживании без гриферства и
+                                привата.
+                            </p>
+                            <div className="hero__buttons">
+                                <Button
+                                    text={ip}
+                                    className="thovered"
+                                    icon={<Copy width={20} height={20} />}
+                                    onClick={() => {
+                                        copyIp();
+                                    }}
+                                />
+                                <Link href="https://discord.gg/8FGHHKsphg">
+                                    <EmptyButton
+                                        text="Подать Заявку"
+                                        icon={
+                                            <ExternalLink
+                                                width={24}
+                                                id="zayavkaIcon"
+                                            />
+                                        }
+                                        className="thovered"
+                                    />
+                                </Link>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section className="faq container">
+                    <h2 className="section__title faq__title">
+                        Часто задаваемые вопросы
+                    </h2>
+                    <Faq
+                        question="Сколько длится сезон?"
+                        answer="Минимум месяц. Окончательная продолжительность сезона зависит от выхода новых версий и интереса игроков к серверу."
+                    />
+                    <Faq
+                        question="Какая версия сервера?"
+                        answer="Версия: Java Edition 1.21.4"
+                    />
+                    <Faq
+                        question="Можно ли грать с телефона или приставки?"
+                        answer="Нет, сервер доступен только на Java Edition. Но вы можете попробовать скачать Pojavlauncher себе на телефон!"
+                    />
+                    <Faq
+                        question="Какая валюта на сервере?"
+                        answer="Основная валюта сервера - Алмазная руда и Алмазоносный глубинный сланец."
+                    />
+                    <Faq
+                        question="Как связаться с модерацией?"
+                        answer="Если вы столкнулись с проблемами на сервере или хотите задать вопрос, обращение к модерации возможно написав жалобу в канале #🎫поддержка в Discord сервере. (Личные сообщения - не поддержка сервера, Ваше обращение может остаться без ответа.)"
+                    />
+                    <Faq
+                        question="Я не умею строить, что делать?"
+                        answer="Совсем не обязательно уметь красиво строить, чтобы играть на сервере Cookie Vanilla. На сервере каждый может найти себя в других занятиях, таких как: создание и участие в ивентах, строительство ферм, торговля, коммуникация с другими игроками, совместная добыча ресурсов, строительство артов и многое другое."
+                    />
+                    <Faq
+                        question="А можно не участвовать в ивентах?"
+                        answer="Несмотря на то, что мы делаем упор на сплоченности сообщества, устраивая ивенты, совместные постройки и добычу ресурсов, мы никого не заставляем взаимодействовать с другими игроками. Вы можете спокойно выживать вдали от всех."
+                    />
+                </section>
+            </main>
+        </>
+    );
+};
+
+export default Home;

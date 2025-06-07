@@ -1,0 +1,42 @@
+@use "../utils/_colors.scss" as c;
+
+.footer {
+    margin-top: 75px;
+    padding: 30px;
+
+    border-top: 1px solid var(--border);
+
+    &__content {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__left {
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        flex-direction: column;
+        gap: 14px;
+
+        & p {
+            color: var(--sm-text);
+            width: 750px;
+        }
+    }
+
+    &__badges {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 25px;
+
+        position: relative;
+
+        user-select: none;
+    }
+}
+
+body:not(.dark-theme) .dbd {
+    filter: invert(1);
+}

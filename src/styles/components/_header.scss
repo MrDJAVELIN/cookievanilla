@@ -1,0 +1,118 @@
+@use "../utils/_colors.scss" as c;
+
+.header {
+    position: fixed;
+    left: 50%;
+    transform: translate(-50%, 0);
+
+    transition: all 0.5s;
+    z-index: 10;
+
+    width: 100%;
+    padding: 10px 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &-blur {
+        background: #00000025;
+        backdrop-filter: blur(5px);
+        -webkit-backdrop-filter: blur(5px);
+
+        // border-bottom: 1px solid var(--border);
+
+        // padding: 10px 0;
+    }
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &__logo {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+
+        transition: all 0.3s ease-in-out;
+
+        & span {
+            color: var(--accent-text);
+            font-weight: 700;
+            font-size: 1.5rem;
+        }
+    }
+
+    & .hlogo {
+        border-radius: 10px;
+        width: 45px;
+        height: 45px;
+    }
+
+    &__nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 75px;
+    }
+
+    &__nav ul {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        list-style: none;
+        gap: 25px;
+    }
+
+    &__nav ul li a {
+        font-family: "Roboto", sans-serif;
+        font-size: 1.1rem;
+
+        text-decoration: none;
+
+        color: var(--accent-text);
+
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        transition: color 0.3s ease;
+
+        &:hover {
+            color: var(--accent-text);
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translate(-50%);
+            width: 70%;
+            height: 2px;
+            opacity: 0;
+            background: var(--text);
+
+            transition: all 0.3s ease;
+        }
+
+        &:hover::after {
+            width: 70%;
+            height: 2px;
+            opacity: 1;
+            bottom: -5px;
+        }
+    }
+
+    &__right {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        gap: 10px;
+    }
+}
