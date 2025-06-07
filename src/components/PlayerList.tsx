@@ -1,3 +1,4 @@
+"use client";
 import axios from "axios";
 import { Users } from "lucide-react";
 import React, { useEffect, useState } from "react";
