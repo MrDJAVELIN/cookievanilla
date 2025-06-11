@@ -31,7 +31,13 @@ const Header = () => {
 
     return (
         <>
-            <header className={blurHeader ? "header header-blur" : "header"}>
+            <header
+                className={
+                    blurHeader
+                        ? "header container header-blur"
+                        : "header container"
+                }
+            >
                 <div className="header-content container">
                     <Link className="header-content__logo thovered" href="/#">
                         <Logo
