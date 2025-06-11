@@ -3,6 +3,11 @@
 import { ChevronDown } from "lucide-react";
 import React, { useState } from "react";
 
+interface FaqProps {
+    question: string;
+    answer: string;
+}
+
 const Faq = ({ question, answer }: FaqProps) => {
     const [active, setActive] = useState(false);
 

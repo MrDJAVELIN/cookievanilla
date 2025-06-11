@@ -8,21 +8,24 @@
     transition: all 0.5s;
     z-index: 10;
 
-    width: 100%;
-    padding: 10px 0;
+    padding: 10px 10px;
 
     display: flex;
     align-items: center;
     justify-content: center;
 
+    border-radius: 50px;
+    border: 1px solid #ffffff00;
+
     &-blur {
         background: #00000025;
-        backdrop-filter: blur(5px);
+        backdrop-filter: blur(7px);
         -webkit-backdrop-filter: blur(5px);
 
-        // border-bottom: 1px solid var(--border);
-
-        // padding: 10px 0;
+        margin-top: 10px;
+        padding: 10px 15px;
+        border-radius: 50px;
+        border: 1px solid var(--border);
     }
 }
 
@@ -46,6 +49,10 @@
         }
     }
 
+    .header-blur &__logo {
+        border-radius: 50px;
+    }
+
     & .hlogo {
         border-radius: 10px;
         width: 45px;
@@ -56,7 +63,7 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-        gap: 75px;
+        gap: 25px;
     }
 
     &__nav ul {

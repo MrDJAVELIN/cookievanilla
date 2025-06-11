@@ -3,6 +3,15 @@ import axios from "axios";
 import { Users } from "lucide-react";
 import React, { useEffect, useState } from "react";
 
+interface ServerStats {
+    players: {
+        online: number;
+        max: number;
+        list: string[];
+    };
+    online: boolean;
+}
+
 const PlayerList = () => {
     const [stats, setStats] = useState<ServerStats | null>(null);
 

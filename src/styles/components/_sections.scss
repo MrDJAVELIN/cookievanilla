@@ -4,16 +4,65 @@
     text-align: center;
 }
 
-
+@keyframes round_animation {
+    0% {
+        transform: translate(0px, 0px);
+        background: #ff0000;
+        filter: blur(250px);
+    }
+    100% {
+        transform: translate(-50%, 50%);
+        filter: blur(150px);
+    }
+}
+@keyframes round_animation_a {
+    0% {
+        transform: translate(-50%, 0px);
+        background: #ff0000;
+        filter: blur(250px);
+    }
+    100% {
+        transform: translate(50%, -50%);
+        filter: blur(150px);
+    }
+}
 
 .hero {
-    // background: linear-gradient(0deg, var(--background) 0%, #00000025 50%) center /
-    //         cover no-repeat,
-    //     url(../../assets/bg5.webp) 50% 50% / cover no-repeat;
+    // background: linear-gradient(0deg, var(--background) 0%, #00000025 50%)
+    //         center / cover no-repeat,
+    //     url() 50% 50% / cover no-repeat;
 
     position: relative;
     width: 100vw;
-    border-bottom: 1px solid var(--border-hover);
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 100px;
+        right: -50px;
+        width: 250px;
+        height: 100px;
+        background: #ff0000;
+        border-radius: 50%;
+        filter: blur(250px);
+
+        z-index: -10;
+        animation: round_animation 5s ease-in-out 1s infinite alternate;
+    }
+    &::after {
+        content: "";
+        position: absolute;
+        bottom: 100px;
+        left: 75px;
+        width: 100px;
+        height: 150px;
+        background: #ff0000;
+        border-radius: 50%;
+        filter: blur(250px);
+
+        z-index: -10;
+        animation: round_animation_a 5s ease-in-out 1s infinite alternate;
+    }
 
     &__content {
         padding: 175px 0 75px 0;
@@ -36,7 +85,7 @@
         align-items: center;
         justify-content: center;
         flex-direction: column;
-        gap: 10px;
+        gap: 5px;
 
         &__title {
             font-size: 2.4rem;
@@ -164,16 +213,21 @@
     }
 
     &-element {
-        width: 90%;
+        width: 100%;
         display: flex;
-        align-items: flex-start;
+        align-items: center;
         justify-content: center;
         flex-direction: column;
         overflow: hidden;
         position: relative;
-        border-bottom: 1px solid #ffffff00;
-        padding: 20px 0 0;
+        border: 1px solid var(--border);
+        border-radius: 45px;
+        padding: 15px;
         transition: all 0.3s ease-in-out;
+
+        &:hover {
+            border: 1px solid var(--border-hover);
+        }
     }
 
     &-question {
@@ -186,23 +240,34 @@
         transition: all 0.3s ease-in-out;
 
         & span {
-            font-size: 1.6rem;
+            font-size: 1.5rem;
             font-weight: 600;
             width: 85%;
         }
     }
 
     &-active {
-        border-bottom: 1px solid var(--border-hover);
+        border: 1px solid var(--border-hover);
         transition: all 0.3s ease-in-out;
-        margin: 25px 0;
+        margin: 5px 0;
+    }
+
+    &-active &-question {
+        width: 95%;
     }
 
     &-active .faq-answer {
-        padding: 20px 10px 15px 20px;
+        margin-top: 10px;
         opacity: 1;
         top: 0;
-        max-height: 250px;
+        max-height: 999px;
+        visibility: visible;
+        pointer-events: all;
+    }
+
+    &-icon {
+        transition: all 0.3s ease-in-out;
+        transform: rotate(0deg);
     }
 
     &-active .faq-icon {
@@ -210,13 +275,17 @@
     }
 
     &-answer {
+        position: relative;
         display: flex;
         align-items: flex-start;
         justify-content: flex-start;
+        align-self: flex-start;
         padding: 0 10px 0 20px;
         opacity: 0;
-        top: 50px;
+        visibility: hidden;
+        pointer-events: none;
         max-height: 0;
+        top: 50px;
         transition: all 0.3s ease-in-out;
 
         & p {
@@ -252,7 +321,7 @@
     gap: 15px;
     flex-basis: calc((100% - 15px) / 4);
     border: 1px solid var(--border);
-    border-radius: 10px 10px;
+    border-radius: 30px;
     padding: 0px 0px 15px;
     overflow: hidden;
     transition: all 0.3s ease-in-out;
@@ -260,6 +329,8 @@
     &:hover {
         background: #ffffff15;
         border: 1px solid var(--border-hover);
+        border-radius: 35px;
+        transform: scale(1.02);
     }
 
     & img {

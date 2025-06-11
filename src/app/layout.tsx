@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import "@/styles/main.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import { useState } from "react";
 import { Poppins } from "next/font/google";
 
 const poppins = Poppins({

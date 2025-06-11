@@ -1,6 +1,11 @@
-import { CloudCog, ExternalLink, Sun } from "lucide-react";
+import { ExternalLink } from "lucide-react";
 import Link from "next/link";
 import React from "react";
+
+interface BMenuProps {
+    stat: boolean;
+    closeMenu: () => void;
+}
 
 const BMenu = ({ stat, closeMenu }: BMenuProps) => {
     return (

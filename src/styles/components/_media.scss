@@ -69,15 +69,18 @@
         max-width: 600px;
     }
 
-    #menubtn {
+    #menubtn,
+    #themebtn {
         display: flex;
     }
 
     .header-content {
         &__nav {
-            display: none;
+            gap: 20px;
+            & ul {
+                display: none;
+            }
         }
-
         &__logo {
             & img {
                 width: 45px;

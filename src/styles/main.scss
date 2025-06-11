@@ -131,7 +131,7 @@ main {
 }
 
 .btn {
-    padding: 8px 15px;
+    padding: 9px 20px;
     font-size: 1.2rem;
     font-weight: 700;
     font-family: "Poppins", sans-serif;
@@ -142,8 +142,8 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 10px;
-    border-radius: 10px;
+    gap: 12px;
+    border-radius: 50px;
     cursor: pointer;
     transition: all 0.3s ease-in-out;
     backdrop-filter: blur(3px);
@@ -151,8 +151,9 @@ main {
 
     &:hover {
         background: var(--accent-red-transparent);
-        color: #fff;
-        border: 1px solid var(--accent-red-hover);
+        border: 1px solid var(--border-hover);
+
+        box-shadow: 0px 0px 15px var(--accent-red-transparent);
     }
 
     &:active {
@@ -163,14 +164,16 @@ main {
 
 .lbtn {
     @extend .btn;
-    background: #00000085;
+
+    background: var(--background);
     border: 1px solid var(--border);
-    color: #fff;
+    color: var(--text);
 
     &:hover {
-        background: #00000060;
-        color: #fff;
+        background: var(--background-tr);
         border: 1px solid var(--border-hover);
+
+        box-shadow: 0px 0px 0px var(--border);
     }
 
     &:active {

@@ -35,7 +35,6 @@ const Home = () => {
                         <div className="hero__left">
                             <div className="hero__titles">
                                 <h1 className="hero__titles__title">
-                                    <Cookie width={30} height={30} />
                                     Cookie Vanilla
                                 </h1>
                                 <span className="hero__titles__season">
@@ -44,7 +43,7 @@ const Home = () => {
                                 </span>
                             </div>
                             <p className="hero__description">
-                                — приватный ванильный RolePlay сервер minecraft
+                                — приватный ванильный RolePlay сервер Minecraft
                                 с крутыми фишками, которые не портят ванильное
                                 выживание. Сервер основан на дружеском и конечно
                                 же классическом выживании без гриферства и

@@ -1,6 +1,12 @@
 import { X } from "lucide-react";
 import React from "react";
 
+interface MessageProps {
+    text: string;
+    icon?: React.ReactNode;
+    type: "success" | "error" | "warning" | "info";
+}
+
 const Message = ({ text, icon, type }: MessageProps) => {
     return (
         <div className={`message message__${type}`}>

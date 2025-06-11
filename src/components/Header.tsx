@@ -2,37 +2,36 @@
 
 import React, { useEffect, useState } from "react";
 import Logo from "./Logo";
-import { Menu, Sun } from "lucide-react";
+import { Menu } from "lucide-react";
 import BMenu from "./BMenu";
 import Link from "next/link";
 
 const Header = () => {
     const [blurHeader, setBlurHeader] = useState(false);
     const [openMenu, setOpenMenu] = useState(false);
-    const [darkTheme, setDarkTheme] = useState(false);
+    const [lightTheme, setLightTheme] = useState(false);
 
     useEffect(() => {
-        if (darkTheme) {
-            document.body.classList.add("dark-theme");
+        if (lightTheme) {
+            document.body.classList.add("light-theme");
         } else {
-            document.body.classList.remove("dark-theme");
+            document.body.classList.remove("light-theme");
         }
-
-        localStorage.setItem("darkTheme", JSON.stringify(darkTheme));
-    }, [darkTheme]);
+        localStorage.setItem("lightTheme", JSON.stringify(lightTheme));
+    }, [lightTheme]);
 
     useEffect(() => {
         const handleScroll = () => {
-            setBlurHeader(window.scrollY > 150);
+            setBlurHeader(window.scrollY >= 150);
         };
-
+        handleScroll();
         window.addEventListener("scroll", handleScroll);
         return () => window.removeEventListener("scroll", handleScroll);
     }, []);
 
     return (
         <>
-            <header className={blurHeader ? `header header-blur` : `header`}>
+            <header className={blurHeader ? "header header-blur" : "header"}>
                 <div className="header-content container">
                     <Link className="header-content__logo thovered" href="/#">
                         <Logo
@@ -40,12 +39,13 @@ const Header = () => {
                             type="logo"
                             width={50}
                             height={50}
-                            radius={15}
+                            radius={50}
                         />
                         <span>Cookie Vanilla</span>
                     </Link>
+
                     <nav className="header-content__nav">
-                        <ul>
+                        <ul className="header-content__nav__ul">
                             <li className="thovered">
                                 <Link href="/#">Главная</Link>
                             </li>
@@ -77,21 +77,15 @@ const Header = () => {
                                 </Link>
                             </li>
                         </ul>
-                        <Sun
-                            onClick={() => setDarkTheme((prev) => !prev)}
-                            width={25}
-                            height={25}
+
+                        <Menu
+                            width={35}
+                            height={35}
+                            onClick={() => setOpenMenu(!openMenu)}
                             style={{ cursor: "pointer" }}
+                            id="menubtn"
                         />
                     </nav>
-
-                    <Menu
-                        width={35}
-                        height={35}
-                        onClick={() => setOpenMenu(!openMenu)}
-                        style={{ cursor: "pointer" }}
-                        id="menubtn"
-                    />
                 </div>
             </header>
             <BMenu stat={openMenu} closeMenu={() => setOpenMenu(false)} />

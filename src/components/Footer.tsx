@@ -15,7 +15,7 @@ const Footer = () => {
                             type="logo"
                             width={50}
                             height={50}
-                            radius={15}
+                            radius={50}
                         />
                         <span>&copy; Cookiev.xyz 2022-2025</span>
                     </Link>
