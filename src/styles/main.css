@@ -144,6 +144,7 @@
 .hero {
   position: relative;
   width: 100vw;
+  overflow-x: hidden;
 }
 .hero::before {
   content: "";
@@ -476,6 +477,7 @@
   border: 1px solid var(--border);
   border-radius: 50px;
   padding: 20px;
+  width: 100%;
   transition: all 0.3s ease-in-out;
 }
 .footer__content:hover {

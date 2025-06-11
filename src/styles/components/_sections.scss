@@ -35,6 +35,8 @@
     position: relative;
     width: 100vw;
 
+    overflow-x: hidden;
+
     &::before {
         content: "";
         position: absolute;
