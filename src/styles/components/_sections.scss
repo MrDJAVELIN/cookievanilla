@@ -35,7 +35,9 @@
     position: relative;
     width: 100vw;
 
-    overflow-x: hidden;
+    overflow: hidden;
+
+    border-bottom: 1px solid #ffffff15;
 
     &::before {
         content: "";
@@ -223,8 +225,8 @@
         overflow: hidden;
         position: relative;
         border: 1px solid var(--border);
-        border-radius: 45px;
-        padding: 15px;
+        border-radius: 35px;
+        padding: 15px 20px;
         transition: all 0.3s ease-in-out;
 
         &:hover {

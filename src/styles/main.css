@@ -144,7 +144,8 @@
 .hero {
   position: relative;
   width: 100vw;
-  overflow-x: hidden;
+  overflow: hidden;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.0823529412);
 }
 .hero::before {
   content: "";
@@ -315,8 +316,8 @@
   overflow: hidden;
   position: relative;
   border: 1px solid var(--border);
-  border-radius: 45px;
-  padding: 15px;
+  border-radius: 35px;
+  padding: 15px 20px;
   transition: all 0.3s ease-in-out;
 }
 .faq-element:hover {
@@ -475,7 +476,7 @@
   align-items: center;
   justify-content: space-between;
   border: 1px solid var(--border);
-  border-radius: 50px;
+  border-radius: 35px;
   padding: 20px;
   width: 100%;
   transition: all 0.3s ease-in-out;
