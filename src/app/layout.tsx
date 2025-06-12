@@ -13,6 +13,9 @@ const poppins = Poppins({
 export const metadata: Metadata = {
     title: "Cookie Vanilla",
     description: "Cookie Vanilla - minecraft server",
+    icons: {
+        icon: "/logo.png",
+    },
 };
 
 export default function RootLayout({

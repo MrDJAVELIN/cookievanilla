@@ -124,22 +124,22 @@
   0% {
     transform: translate(0px, 0px);
     background: #ff0000;
-    filter: blur(250px);
+    filter: blur(150px);
   }
   100% {
     transform: translate(-50%, 50%);
-    filter: blur(150px);
+    filter: blur(100px);
   }
 }
 @keyframes round_animation_a {
   0% {
     transform: translate(-50%, 0px);
     background: #ff0000;
-    filter: blur(250px);
+    filter: blur(150px);
   }
   100% {
     transform: translate(50%, -50%);
-    filter: blur(150px);
+    filter: blur(100px);
   }
 }
 .hero {
@@ -156,11 +156,11 @@
   position: absolute;
   top: 100px;
   right: -50px;
-  width: 250px;
-  height: 100px;
+  width: 350px;
+  height: 200px;
   background: #ff0000;
   border-radius: 50%;
-  filter: blur(250px);
+  filter: blur(150px);
   z-index: -10;
   animation: round_animation 5s ease-in-out 1s infinite alternate;
 }
@@ -169,24 +169,30 @@
   position: absolute;
   bottom: 100px;
   left: 75px;
-  width: 100px;
-  height: 150px;
+  width: 200px;
+  height: 250px;
   background: #ff0000;
   border-radius: 50%;
-  filter: blur(250px);
+  filter: blur(150px);
   z-index: -10;
   animation: round_animation_a 5s ease-in-out 1s infinite alternate;
 }
 .hero__content {
-  padding: 175px 0 75px 0;
+  padding: 150px 0 75px 0;
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   justify-content: center;
+  flex-direction: column;
   gap: 50px;
+}
+.hero__container {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
 }
 .hero__left {
   display: flex;
-  align-items: center;
+  align-items: start;
   justify-content: center;
   flex-direction: column;
   gap: 40px;
@@ -205,6 +211,19 @@
   justify-content: center;
   gap: 20px;
   color: var(--accent-text);
+  position: relative;
+  z-index: 5;
+}
+.hero__titles__title::after {
+  content: "";
+  position: absolute;
+  bottom: 12px;
+  left: 50%;
+  transform: translate(-50%);
+  width: 100%;
+  height: 30%;
+  background: var(--accent-red);
+  z-index: -1;
 }
 .hero__titles__season {
   font-size: 1.6rem;
@@ -215,50 +234,47 @@
   gap: 10px;
   color: var(--accent-text);
 }
+.hero__words {
+  font-size: 3.8rem;
+  font-weight: 1000;
+  width: 50%;
+  line-height: 120%;
+}
 .hero__description {
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   font-family: "Roboto", sans-serif;
   font-weight: 400;
   color: var(--accent-text);
-  width: 625px;
-  text-align: center;
+  width: 70%;
+  text-align: left;
 }
 .hero .playerlist {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  background: var(--background-tr);
+  background: rgba(0, 0, 0, 0.0823529412);
   padding: 0px 30px;
   border: solid 1px var(--border);
-  -webkit-backdrop-filter: blur(5px);
-          backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(7px);
+          backdrop-filter: blur(7px);
   border-radius: 10px;
   gap: 20px;
   position: relative;
   overflow: hidden;
 }
-.hero .playerlist h3 {
-  margin-top: 45px;
-  font-size: 1.6rem;
-  font-weight: 700;
-  font-family: "Poppins", sans-serif;
-  color: var(--text);
-}
 .hero .playerlist ul {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 5px 20px;
+  list-style: none;
   padding: 10px 0;
   margin-bottom: 25px;
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  list-style: none;
-  max-height: 210px;
-  overflow-y: hidden;
-  max-width: 380px;
+  max-height: 300px;
+  overflow-y: auto;
+  max-width: 100%;
 }
 .hero .playerlist li {
-  flex-basis: calc((100% - 35px) / 2);
   font-size: 1.5rem;
   font-weight: 700;
   letter-spacing: 1.2px;
@@ -275,12 +291,17 @@
   white-space: nowrap;
   display: inline-block;
 }
-.hero .playerlist h3 {
+.hero .playerlist > span {
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-direction: column;
+  flex-direction: row;
   gap: 5px;
+  margin-top: 45px;
+  font-size: 1.6rem;
+  font-weight: 500;
+  font-family: "Poppins", sans-serif;
+  color: var(--text);
 }
 .hero .playerlist__online {
   font-size: 1.4rem;

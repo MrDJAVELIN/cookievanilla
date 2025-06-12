@@ -1,4 +1,5 @@
 "use client";
+
 import axios from "axios";
 import { Users } from "lucide-react";
 import React, { useEffect, useState } from "react";
@@ -19,7 +20,7 @@ const PlayerList = () => {
         const fetchStats = async () => {
             try {
                 const res = await axios.get(
-                    "https://api.mcsrvstat.us/2/c13.play2go.cloud:20087"
+                    "https://api.mcsrvstat.us/2/c13.play2go.cloud:20004"
                 );
                 setStats(res.data);
             } catch (error) {
@@ -35,13 +36,10 @@ const PlayerList = () => {
 
     return (
         <div className="playerlist thovered">
-            <h3>
-                Игроки на сервере:
-                <span className="playerlist__online" title="Онлайн/Максимум">
-                    {stats?.players?.online}/{stats?.players?.max}
-                    <Users strokeWidth={2} />
-                </span>
-            </h3>
+            <span className="playerlist__online" title="Онлайн/Максимум">
+                {stats?.players?.online}/2025
+                <Users strokeWidth={2} />
+            </span>
 
             <ul>
                 {stats?.players?.list ? (

@@ -22,7 +22,7 @@ const Header = () => {
 
     useEffect(() => {
         const handleScroll = () => {
-            setBlurHeader(window.scrollY >= 150);
+            setBlurHeader(window.scrollY >= 100);
         };
         handleScroll();
         window.addEventListener("scroll", handleScroll);
@@ -47,7 +47,7 @@ const Header = () => {
                             height={50}
                             radius={50}
                         />
-                        <span>Cookie Vanilla</span>
+                        <span>Cookie Vanilla | DESIGN TEST</span>
                     </Link>
 
                     <nav className="header-content__nav">

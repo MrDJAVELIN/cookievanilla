@@ -33,44 +33,52 @@ const Home = () => {
             <main>
                 <section className="hero">
                     <div className="hero__content container">
-                        <div className="hero__left">
-                            <div className="hero__titles">
-                                <h1 className="hero__titles__title">
-                                    Cookie Vanilla
-                                </h1>
-                                <span className="hero__titles__season">
-                                    <CalendarClock width={25} height={25} />{" "}
-                                    ЛЕТНИЙ СЕЗОН
-                                </span>
-                            </div>
-                            <p className="hero__description">
-                                — приватный ванильный RolePlay сервер Minecraft
-                                с крутыми фишками, которые не портят ванильное
-                                выживание. Сервер основан на дружеском и конечно
-                                же классическом выживании без гриферства и
-                                привата.
-                            </p>
-                            <div className="hero__buttons">
-                                <Button
-                                    text={ip}
-                                    className="thovered"
-                                    icon={<Copy width={20} height={20} />}
-                                    onClick={() => {
-                                        copyIp();
-                                    }}
-                                />
-                                <Link href="https://discord.gg/8FGHHKsphg">
-                                    <EmptyButton
-                                        text="Подать Заявку"
-                                        icon={
-                                            <ExternalLink
-                                                width={24}
-                                                id="zayavkaIcon"
-                                            />
-                                        }
+                        <div className="hero__titles">
+                            <h1 className="hero__titles__title">
+                                Cookie Vanilla
+                            </h1>
+                            <span className="hero__titles__season">
+                                <CalendarClock width={25} height={25} /> ЛЕТНИЙ
+                                СЕЗОН
+                            </span>
+                        </div>
+                        <div className="hero__container">
+                            <div className="hero__left">
+                                <div className="hero__words">
+                                    Приватный, ванильный, ролевой
+                                </div>
+                                <p className="hero__description">
+                                    — приватный ванильный RolePlay сервер
+                                    Minecraft с крутыми фишками, которые не
+                                    портят ванильное выживание. Сервер основан
+                                    на дружеском и конечно же классическом
+                                    выживании без гриферства и привата.
+                                </p>
+                                <div className="hero__buttons">
+                                    <Button
+                                        text={ip}
                                         className="thovered"
+                                        icon={<Copy width={20} height={20} />}
+                                        onClick={() => {
+                                            copyIp();
+                                        }}
                                     />
-                                </Link>
+                                    <Link href="https://discord.gg/8FGHHKsphg">
+                                        <EmptyButton
+                                            text="Подать Заявку"
+                                            icon={
+                                                <ExternalLink
+                                                    width={24}
+                                                    id="zayavkaIcon"
+                                                />
+                                            }
+                                            className="thovered"
+                                        />
+                                    </Link>
+                                </div>
+                            </div>
+                            <div className="hero__right">
+                                <PlayerList />
                             </div>
                         </div>
                     </div>
