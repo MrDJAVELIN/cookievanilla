@@ -22,7 +22,7 @@ export const metadata: Metadata = {
         title: "Cookie Vanilla",
         description:
             "Приватный ванильный ролевой Minecraft сервер без привата и гриферства.",
-        url: "https://cookiev.xyz",
+        url: "https://www.cookiev.xyz",
         siteName: "Cookie Vanilla",
         images: [
             {
