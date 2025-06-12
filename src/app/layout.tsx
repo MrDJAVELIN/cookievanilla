@@ -26,7 +26,7 @@ export const metadata: Metadata = {
         siteName: "Cookie Vanilla",
         images: [
             {
-                url: "/bg.png",
+                url: "/empty.png",
                 width: 1200,
                 height: 630,
                 alt: "Cookie Vanilla Preview",
