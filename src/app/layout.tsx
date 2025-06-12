@@ -33,7 +33,6 @@ export const metadata: Metadata = {
             },
         ],
         type: "website",
-        themeColor: "#ff0000",
     },
     twitter: {
         card: "summary_large_image",
