@@ -10,14 +10,14 @@ const poppins = Poppins({
     style: ["normal", "italic"],
 });
 
-export const metadata: Metadata = {
-    title: "Cookie Vanilla",
-    description:
-        "Cookie vanilla — приватный ванильный ролевой сервер Minecraft с крутыми фишками, которые не портят ванильное выживание. Сервер основан на дружеском и конечно же классическом выживании без гриферства и привата.",
-    icons: {
-        icon: "/logo.png",
-    },
-};
+// export const metadata: Metadata = {
+//     title: "Cookie Vanilla",
+//     description:
+//         "Cookie vanilla — приватный ванильный ролевой сервер Minecraft с крутыми фишками, которые не портят ванильное выживание. Сервер основан на дружеском и конечно же классическом выживании без гриферства и привата.",
+//     icons: {
+//         icon: "/logo.png",
+//     },
+// };
 
 export const metadata = {
     title: "Cookie Vanilla",
