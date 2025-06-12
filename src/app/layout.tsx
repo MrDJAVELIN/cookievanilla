@@ -17,8 +17,26 @@ export const metadata: Metadata = {
     icons: {
         icon: "/logo.png",
     },
+    themeColor: "#ff0000",
     openGraph: {
-        images: ["/logo.png"],
+        title: "Cookie Vanilla",
+        description:
+            "Приватный ванильный ролевой Minecraft сервер без привата и гриферства.",
+        url: "https://cookiev.xyz",
+        siteName: "Cookie Vanilla",
+        images: [
+            {
+                url: "/bg.png",
+                width: 1200,
+                height: 630,
+                alt: "Cookie Vanilla Preview",
+            },
+        ],
+        type: "website",
+    },
+    twitter: {
+        card: "summary_large_image",
+        images: ["/bg.png"],
     },
 };
 
