@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import EmptyButton from "./EmptyButton";
 import { Download } from "lucide-react";

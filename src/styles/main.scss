@@ -123,7 +123,7 @@ main {
     transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
 
     &:hover {
-        transform: scale(1.01);
+        transform: scale(1.005);
     }
     &:active {
         transform: scale(1);
@@ -153,7 +153,7 @@ main {
         background: var(--accent-red-transparent);
         border: 1px solid var(--border-hover);
 
-        box-shadow: 0px 0px 15px var(--accent-red-transparent);
+        // box-shadow: 0px 0px 15px var(--accent-red-transparent);
     }
 
     &:active {
@@ -171,8 +171,6 @@ main {
     &:hover {
         background: var(--background-tr);
         border: 1px solid var(--border-hover);
-
-        box-shadow: 0px 0px 0px var(--border);
     }
 
     &:active {

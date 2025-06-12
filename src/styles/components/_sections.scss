@@ -4,73 +4,16 @@
     text-align: center;
 }
 
-@keyframes round_animation {
-    0% {
-        transform: translate(0px, 0px);
-        background: #ff0000;
-        filter: blur(150px);
-    }
-    100% {
-        transform: translate(-50%, 50%);
-        filter: blur(100px);
-    }
-}
-@keyframes round_animation_a {
-    0% {
-        transform: translate(-50%, 0px);
-        background: #ff0000;
-        filter: blur(150px);
-    }
-    100% {
-        transform: translate(50%, -50%);
-        filter: blur(100px);
-    }
-}
-
 .hero {
     background: linear-gradient(0deg, var(--background) 0%, #00000025 50%)
             center / cover no-repeat,
-        url("/bg.png") 50% 50% / cover no-repeat;
+        url("/bg.png") center center / cover no-repeat;
 
-    position: relative;
-    width: 100vw;
-
+    height: auto;
+    width: 100%;
     overflow: hidden;
-
-    border-bottom: 1px solid #ffffff15;
-
     padding: 0 0 10px 0;
-
-    border: 1px solid var(--background);
-
-    &::before {
-        content: "";
-        position: absolute;
-        top: 100px;
-        right: -50px;
-        width: 350px;
-        height: 200px;
-        background: #ff0000;
-        border-radius: 50%;
-        filter: blur(150px);
-
-        z-index: -10;
-        animation: round_animation 5s ease-in-out 1s infinite alternate;
-    }
-    &::after {
-        content: "";
-        position: absolute;
-        bottom: 100px;
-        left: 75px;
-        width: 200px;
-        height: 250px;
-        background: #ff0000;
-        border-radius: 50%;
-        filter: blur(150px);
-
-        z-index: -10;
-        animation: round_animation_a 5s ease-in-out 1s infinite alternate;
-    }
+    border-bottom: 1px solid var(--background);
 
     &__content {
         padding: 150px 0 75px 0;
@@ -94,6 +37,7 @@
         justify-content: center;
         flex-direction: column;
         gap: 40px;
+        width: 100%;
     }
 
     &__titles {
@@ -104,7 +48,7 @@
         gap: 5px;
 
         &__title {
-            font-size: 2.4rem;
+            font-size: 3rem;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -143,8 +87,27 @@
     &__words {
         font-size: 3.8rem;
         font-weight: 1000;
-        width: 50%;
+        width: 60%;
         line-height: 120%;
+
+        & span {
+            position: relative;
+
+            z-index: 5;
+
+            &::after {
+                content: "";
+                position: absolute;
+                bottom: 12px;
+                left: 50%;
+                transform: translate(-50%);
+                width: 100%;
+                height: 30%;
+                background: var(--accent-red);
+
+                z-index: -1;
+            }
+        }
     }
 
     &__description {
@@ -165,14 +128,14 @@
         padding: 0px 30px;
         border: solid 1px var(--border);
         backdrop-filter: blur(7px);
-        border-radius: 10px;
+        border-radius: 25px;
         gap: 20px;
         position: relative;
         overflow: hidden;
 
         & ul {
             display: grid;
-            grid-template-columns: repeat(2, 1fr); // две колонки
+            grid-template-columns: repeat(2, 1fr);
             gap: 5px 20px;
 
             list-style: none;
@@ -237,6 +200,29 @@
     }
 }
 
+@keyframes round_animation {
+    0% {
+        transform: translate(-50%, 0px);
+        background: #ff0000;
+        filter: blur(200px);
+    }
+    100% {
+        transform: translate(-10%, 50%);
+        filter: blur(150px);
+    }
+}
+@keyframes round_animation_a {
+    0% {
+        transform: translate(-50%, 0px);
+        background: #ff0000;
+        filter: blur(200px);
+    }
+    100% {
+        transform: translate(0, -70%);
+        filter: blur(150px);
+    }
+}
+
 .faq {
     display: flex;
     align-items: center;
@@ -244,6 +230,37 @@
     flex-direction: column;
     gap: 20px;
     padding: 50px 0 0 0;
+
+    position: relative;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 100px;
+        right: -15%;
+        width: 250px;
+        height: 100px;
+        background: #ff0000;
+        border-radius: 50%;
+        filter: blur(200px);
+
+        z-index: -10;
+        animation: round_animation 5s ease-in-out 1s infinite alternate;
+    }
+    &::after {
+        content: "";
+        position: absolute;
+        bottom: 100px;
+        left: -10%;
+        width: 100px;
+        height: 150px;
+        background: #ff0000;
+        border-radius: 50%;
+        filter: blur(200px);
+
+        z-index: -10;
+        animation: round_animation_a 5s ease-in-out 1s infinite alternate;
+    }
 
     &__title {
         margin-bottom: 50px;

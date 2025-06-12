@@ -47,7 +47,7 @@ const Header = () => {
                             height={50}
                             radius={50}
                         />
-                        <span>Cookie Vanilla | DESIGN TEST</span>
+                        <span>Cookie Vanilla</span>
                     </Link>
 
                     <nav className="header-content__nav">
