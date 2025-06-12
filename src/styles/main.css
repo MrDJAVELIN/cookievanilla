@@ -7,7 +7,7 @@
   --text: #e9e9e9;
   --sm-text: #cecece;
   --accent-text: #fff;
-  --background: #121212;
+  --background: #0e0e0e;
   --background-tr: #12121260;
   --border: #ffffff50;
   --border-hover: #ffffff75;
@@ -124,7 +124,6 @@
   background: linear-gradient(0deg, var(--background) 0%, rgba(0, 0, 0, 0.1450980392) 50%) center/cover no-repeat, url("/bg.png") center center/cover no-repeat;
   height: auto;
   width: 100%;
-  overflow: hidden;
   padding: 0 0 10px 0;
   border-bottom: 1px solid var(--background);
 }
@@ -426,6 +425,35 @@
   padding-top: 160px;
 }
 
+.seasons {
+  position: relative;
+}
+.seasons::before {
+  content: "";
+  position: absolute;
+  top: 100px;
+  right: -15%;
+  width: 250px;
+  height: 100px;
+  background: #ff0000;
+  border-radius: 50%;
+  filter: blur(200px);
+  z-index: -10;
+  animation: round_animation 5s ease-in-out 1s infinite alternate;
+}
+.seasons::after {
+  content: "";
+  position: absolute;
+  bottom: 100px;
+  left: -10%;
+  width: 100px;
+  height: 150px;
+  background: #ff0000;
+  border-radius: 50%;
+  filter: blur(200px);
+  z-index: -10;
+  animation: round_animation_a 5s ease-in-out 1s infinite alternate;
+}
 .seasons__list {
   display: flex;
   align-items: center;
@@ -440,7 +468,7 @@
 .season {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   flex-direction: column;
   gap: 15px;
   flex-basis: calc((100% - 15px) / 4);
@@ -449,6 +477,7 @@
   padding: 0px 0px 15px;
   overflow: hidden;
   transition: all 0.3s ease-in-out;
+  min-height: 450px;
 }
 .season:hover {
   background: rgba(255, 255, 255, 0.0823529412);
@@ -501,7 +530,7 @@
   --text: #e9e9e9;
   --sm-text: #cecece;
   --accent-text: #fff;
-  --background: #121212;
+  --background: #0e0e0e;
   --background-tr: #12121260;
   --border: #ffffff50;
   --border-hover: #ffffff75;
@@ -901,12 +930,12 @@ main {
 }
 
 .lbtn {
-  background: var(--background);
+  background: var(--background-tr);
   border: 1px solid var(--border);
   color: var(--text);
 }
 .lbtn:hover {
-  background: var(--background-tr);
+  background: var(--background);
   border: 1px solid var(--border-hover);
 }
 .lbtn:active {
