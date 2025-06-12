@@ -3,6 +3,7 @@
 .header {
     position: fixed;
     left: 50%;
+    top: 0;
     transform: translate(-50%, 0);
 
     transition: all 0.5s;
@@ -22,7 +23,7 @@
         backdrop-filter: blur(7px);
         -webkit-backdrop-filter: blur(5px);
 
-        margin-top: 10px;
+        top: 10px;
         padding: 10px 20px;
         border-radius: 50px;
         border: 1px solid var(--border);
