@@ -1,4 +1,3 @@
-"use client";
 import Logo from "../components/Logo";
 import Button from "../components/Button";
 import {
@@ -16,18 +15,9 @@ import EmptyButton from "../components/EmptyButton";
 import Faq from "../components/Faq";
 import Link from "next/link";
 import bg from "@/assets/bg.png";
+import Buttons from "@/components/Buttons";
 
 const Home = () => {
-    const ip = "cookiev.xyz";
-
-    function copyIp() {
-        var copyText = ip;
-
-        navigator.clipboard.writeText(copyText);
-
-        alert("Copied: " + copyText);
-    }
-
     return (
         <>
             <main>
@@ -56,26 +46,7 @@ const Home = () => {
                                     привата.
                                 </p>
                                 <div className="hero__buttons">
-                                    <Button
-                                        text={ip}
-                                        className="thovered"
-                                        icon={<Copy width={20} height={20} />}
-                                        onClick={() => {
-                                            copyIp();
-                                        }}
-                                    />
-                                    <Link href="https://discord.gg/8FGHHKsphg">
-                                        <EmptyButton
-                                            text="Подать Заявку"
-                                            icon={
-                                                <ExternalLink
-                                                    width={24}
-                                                    id="zayavkaIcon"
-                                                />
-                                            }
-                                            className="thovered"
-                                        />
-                                    </Link>
+                                    <Buttons />
                                 </div>
                             </div>
                             <div className="hero__right">
