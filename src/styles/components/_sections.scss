@@ -28,9 +28,9 @@
 }
 
 .hero {
-    // background: linear-gradient(0deg, var(--background) 0%, #00000025 50%)
-    //         center / cover no-repeat,
-    //     url() 50% 50% / cover no-repeat;
+    background: linear-gradient(0deg, var(--background) 0%, #00000025 50%)
+            center / cover no-repeat,
+        url("/bg.png") 50% 50% / cover no-repeat;
 
     position: relative;
     width: 100vw;
@@ -38,6 +38,10 @@
     overflow: hidden;
 
     border-bottom: 1px solid #ffffff15;
+
+    padding: 0 0 10px 0;
+
+    border: 1px solid var(--background);
 
     &::before {
         content: "";

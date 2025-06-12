@@ -143,10 +143,13 @@
   }
 }
 .hero {
+  background: linear-gradient(0deg, var(--background) 0%, rgba(0, 0, 0, 0.1450980392) 50%) center/cover no-repeat, url("/bg.png") 50% 50%/cover no-repeat;
   position: relative;
   width: 100vw;
   overflow: hidden;
   border-bottom: 1px solid rgba(255, 255, 255, 0.0823529412);
+  padding: 0 0 10px 0;
+  border: 1px solid var(--background);
 }
 .hero::before {
   content: "";

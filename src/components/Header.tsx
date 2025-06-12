@@ -63,7 +63,7 @@ const Header = () => {
                                     href="https://shop.cookiev.xyz/"
                                     target="_blank"
                                 >
-                                    Превилегии
+                                    Привилегии
                                 </Link>
                             </li>
                             <li className="thovered">

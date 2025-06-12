@@ -15,6 +15,7 @@ import PlayerList from "../components/PlayerList";
 import EmptyButton from "../components/EmptyButton";
 import Faq from "../components/Faq";
 import Link from "next/link";
+import bg from "@/assets/bg.png";
 
 const Home = () => {
     const ip = "cookiev.xyz";
