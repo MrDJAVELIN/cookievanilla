@@ -1,6 +1,6 @@
 import React from "react";
 
-const NotFound = () => {
+const NotFound = ( ) => {
     return (
         <main>
             <section className="container notfound">
