@@ -56,7 +56,7 @@ const Seasons = () => {
             size: "???GB",
             link: "http://176.108.240.184:25564/cookie-5season-dev.zip",
             icon: empty,
-        },
+        }
     ];
 
     return (
