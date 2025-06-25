@@ -65,7 +65,7 @@ const Home = () => {
                     />
                     <Faq
                         question="Какая версия сервера?"
-                        answer="Версия: Java Edition 1.21.4"
+                        answer="Версия: Java Edition 1.21.5"
                     />
                     <Faq
                         question="Можно ли играть с телефона или приставки?"
