@@ -114,7 +114,7 @@
         font-family: "Roboto", sans-serif;
         font-weight: 400;
         color: var(--accent-text);
-        width: 70%;
+        width: 80%;
         text-align: left;
     }
 
@@ -135,7 +135,7 @@
         & ul {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
-            gap: 5px 20px;
+            gap: 5px 60px;
 
             list-style: none;
             padding: 10px 0;
@@ -157,7 +157,7 @@
             justify-content: flex-start;
 
             & span {
-                max-width: 160px;
+                max-width: 200px;
                 text-overflow: ellipsis;
                 overflow: hidden;
                 white-space: nowrap;

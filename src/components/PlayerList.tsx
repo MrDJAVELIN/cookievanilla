@@ -42,6 +42,9 @@ const PlayerList = () => {
             </span>
 
             <ul>
+                <li>
+                    <span>ABCABCABCABCABCABCCABCABCACBACB</span>
+                </li>
                 {stats?.players?.list ? (
                     stats?.players?.list.map((player) =>
                         player === "DJAVELIN_" ? (
