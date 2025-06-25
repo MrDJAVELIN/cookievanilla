@@ -24,10 +24,6 @@ const BMenu = ({ stat, closeMenu }: BMenuProps) => {
                         </li>
                         <li className="thovered">
                             <ExternalLink width={20} />
-                            <Link href="builds">Постройки</Link>
-                        </li>
-                        <li className="thovered">
-                            <ExternalLink width={20} />
                             <Link href="seasons">Сезоны</Link>
                         </li>
                         <div className="menu__line"></div>
