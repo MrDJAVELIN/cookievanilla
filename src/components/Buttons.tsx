@@ -6,7 +6,7 @@ import EmptyButton from "./EmptyButton";
 import { Copy, ExternalLink } from "lucide-react";
 
 const Buttons = () => {
-    const ip = "cookiev.xyz";
+    const ip = "cookiev.cv";
 
     function copyIp() {
         var copyText = ip;
