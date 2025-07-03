@@ -60,7 +60,7 @@ const Header = () => {
                             </li>
                             <li className="thovered">
                                 <Link
-                                    href="https://shop.cookiev.xyz/"
+                                    href="https://shop.cookiev.cv/"
                                     target="_blank"
                                 >
                                     Привилегии
@@ -68,7 +68,7 @@ const Header = () => {
                             </li>
                             <li className="thovered">
                                 <Link
-                                    href="https://wiki.cookiev.xyz/"
+                                    href="https://wiki.cookiev.cv/"
                                     target="_blank"
                                 >
                                     Вики
@@ -76,7 +76,7 @@ const Header = () => {
                             </li>
                             <li className="thovered">
                                 <Link
-                                    href="https://map.cookiev.xyz/"
+                                    href="https://map.cookiev.cv/"
                                     target="_blank"
                                 >
                                     Карта
