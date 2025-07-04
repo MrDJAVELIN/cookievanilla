@@ -47,7 +47,9 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="en">
-            <head></head>
+            <head>
+                <meta name="theme-color" content="#ff0000" />
+            </head>
             <body className={`${poppins.className}`}>
                 <Header />
                 {children}
