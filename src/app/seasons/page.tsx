@@ -46,7 +46,7 @@ const Seasons = () => {
             dateStart: "28.12.2024",
             dateEnd: "21.01.2025",
             size: "2.94GB",
-            link: "",
+            link: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
             icon: empty,
         },
         {
@@ -54,7 +54,7 @@ const Seasons = () => {
             dateStart: "03.03.2025",
             dateEnd: "04.04.2025",
             size: "??GB",
-            link: "",
+            link: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
             icon: empty,
         },
         {
@@ -62,7 +62,7 @@ const Seasons = () => {
             dateStart: "05.04.2025",
             dateEnd: "29.05.2025",
             size: "??GB",
-            link: "",
+            link: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
             icon: empty,
         },
     ];

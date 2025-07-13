@@ -33,7 +33,7 @@ const Season = ({
                     <span>Конец: {dateEnd}</span>
                     <span>Размер: {size}</span>
                 </div>
-                <Link href={link} target="_blank" rel="noreferrer" download>
+                <Link href={link} target="_blank" rel="noreferrer">
                     <EmptyButton
                         text="Загрузить"
                         icon={<Download />}
