@@ -26,7 +26,7 @@ const Buttons = () => {
                     copyIp();
                 }}
             />
-            <Link href="https://discord.gg/8FGHHKsphg">
+            <Link href="https://discord.gg/NWKsGBB9JQ">
                 <EmptyButton
                     text="Подать Заявку"
                     icon={<ExternalLink width={24} id="zayavkaIcon" />}
