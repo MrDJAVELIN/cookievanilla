@@ -17,7 +17,7 @@ const Footer = () => {
                             height={50}
                             radius={50}
                         />
-                        <span>&copy; Cookiev.xyz 2022-2025</span>
+                        <span>&copy; Cookiev.cv 2022-2025</span>
                     </Link>
                     <p>
                         Копирование страниц, а также их содержимого без согласия
