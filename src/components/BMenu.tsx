@@ -58,7 +58,7 @@ const BMenu = ({ stat, closeMenu }: BMenuProps) => {
                         <li className="thovered">
                             <ExternalLink width={20} />
                             <Link
-                                href="https://discord.gg/8FGHHKsphg"
+                                href="https://discord.gg/NWKsGBB9JQ"
                                 target="_blank"
                             >
                                 Discord
