@@ -4,13 +4,21 @@ import axios from "axios";
 import { Users } from "lucide-react";
 import React, { useEffect, useState } from "react";
 
-interface ServerStats {
-    players: {
-        online: number;
-        max: number;
-        list: string[];
-    };
-    online: boolean;
+export interface ServerStats {
+    max: number;
+    players: Player[];
+}
+
+export interface Player {
+    world: string;
+    armor: number;
+    name: string;
+    x: number;
+    y: number;
+    health: number;
+    z: number;
+    uuid: string;
+    yaw: number;
 }
 
 const PlayerList = () => {
@@ -20,7 +28,7 @@ const PlayerList = () => {
         const fetchStats = async () => {
             try {
                 const res = await axios.get(
-                    "https://api.mcsrvstat.us/2/c13.play2go.cloud:20004"
+                    "http://map.cookiev.cv/tiles/players.json"
                 );
                 setStats(res.data);
             } catch (error) {
@@ -37,32 +45,32 @@ const PlayerList = () => {
     return (
         <div className="playerlist thovered">
             <span className="playerlist__online" title="Онлайн/Максимум">
-                {stats?.players?.online}/2025
+                {stats?.players?.length ?? 0}/2025
                 <Users strokeWidth={2} />
             </span>
 
             <ul>
-                {stats?.players?.list ? (
-                    stats?.players?.list.map((player) =>
-                        player === "DJAVELIN_" ? (
-                            <li
-                                key={player}
-                                style={{ order: "-1", color: "#fff" }}
-                                title={player}
-                            >
-                                <span>{player}</span>
-                            </li>
-                        ) : (
-                            <li key={player} title={player}>
-                                <span>{player}</span>
-                            </li>
-                        )
-                    )
+                {stats?.players?.length ? (
+                    stats.players.map((player) => (
+                        <li
+                            key={player.uuid}
+                            title={player.name}
+                            style={
+                                player.name === "DJAVELIN_"
+                                    ? { order: "-1", color: "#fff" }
+                                    : {}
+                            }
+                        >
+                            <span>{player.name}</span>
+                        </li>
+                    ))
                 ) : (
-                    <li>
-                        {stats?.players?.online == 0
-                            ? "Сервер пуст."
-                            : "Загрузка..."}
+                    <li className="playerlist__n">
+                        <span>
+                            {stats?.players?.length === 0
+                                ? "Сервер пуст."
+                                : "Загрузка..."}
+                        </span>
                     </li>
                 )}
             </ul>
