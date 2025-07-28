@@ -28,7 +28,7 @@ const PlayerList = () => {
         const fetchStats = async () => {
             try {
                 const res = await axios.get(
-                    "http://map.cookiev.cv/tiles/players.json"
+                    "https://map.cookiev.cv/tiles/players.json"
                 );
                 setStats(res.data);
             } catch (error) {
