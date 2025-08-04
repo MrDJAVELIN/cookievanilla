@@ -459,3 +459,52 @@
         font-weight: 1000;
     }
 }
+
+/* sidebar.css */
+.sidebar {
+    width: 250px;
+    padding: 1rem;
+    border-right: 1px solid #ddd;
+    height: 100vh;
+    overflow-y: auto;
+    background-color: #fafafa;
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+        Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+}
+
+.sidebar h4 {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    color: #333;
+    user-select: none;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+.sidebar li {
+    margin-bottom: 0.25rem;
+}
+
+.sidebar a {
+    display: block;
+    padding: 6px 10px;
+    border-radius: 6px;
+    color: #444;
+    text-decoration: none;
+    transition: background-color 0.2s ease, font-weight 0.2s ease;
+    cursor: pointer;
+}
+
+.sidebar a:hover {
+    background-color: #e6f0ff;
+}
+
+.sidebar a.active {
+    background-color: #d0e2ff;
+    font-weight: 700;
+    color: #1a73e8;
+}

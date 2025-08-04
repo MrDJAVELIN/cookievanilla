@@ -1,0 +1,95 @@
+{
+    "wiki": [
+        {
+            "type": "category",
+            "path": "important",
+            "name": "🍫 Важное",
+            "files": [
+                {
+                    "type": "file",
+                    "path": "rules.md",
+                    "name": "📗 Правила"
+                },
+                {
+                    "type": "file",
+                    "path": "linking.md",
+                    "name": "⛓️‍💥 Привязка"
+                },
+                {
+                    "type": "file",
+                    "path": "play.md",
+                    "name": "🕹️ Как попасть на сервер?"
+                },
+                {
+                    "type": "file",
+                    "path": "mods.md",
+                    "name": "🧩 Модификации"
+                },
+                {
+                    "type": "file",
+                    "path": "answers.md",
+                    "name": "❓ Часто задаваемые вопросы"
+                }
+            ]
+        },
+        {
+            "type": "category",
+            "path": "mechanics",
+            "name": "⚙️ Кастомные Механики",
+            "files": [
+                {
+                    "type": "file",
+                    "path": "commands.md",
+                    "name": "🎵 Команды"
+                },
+                {
+                    "type": "file",
+                    "path": "skin-url.md",
+                    "name": "🎡 Скины"
+                },
+                {
+                    "type": "file",
+                    "path": "chat.md",
+                    "name": "💬 Чат"
+                },
+                {
+                    "type": "file",
+                    "path": "brew.md",
+                    "name": "🍻 Напитки"
+                },
+                {
+                    "type": "file",
+                    "path": "crafts.md",
+                    "name": "💡 Крафты"
+                },
+                {
+                    "type": "file",
+                    "path": "crafts.md",
+                    "name": "💡 Крафты"
+                },
+                {
+                    "type": "file",
+                    "path": "podpis-predmetov.md",
+                    "name": "✍️ Подпись предметов"
+                },
+                {
+                    "type": "file",
+                    "path": "plasmovoice.md",
+                    "name": "🔊 Голосовой Чат"
+                }
+            ]
+        },
+        {
+            "type": "category",
+            "path": "roleplay",
+            "name": "🧢 Roleplay",
+            "files": [
+                {
+                    "type": "file",
+                    "path": "roles.md",
+                    "name": "🎭 Роли"
+                }
+            ]
+        }
+    ]
+}
