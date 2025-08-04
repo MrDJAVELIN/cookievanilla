@@ -56,13 +56,13 @@ const wikiRoutes = [
     },
 ];
 
+// Для генерации путей
 export async function generateStaticParams() {
-    const paths = wikiRoutes.flatMap((category) =>
+    return wikiRoutes.flatMap((category) =>
         category.files.map((file) => ({
             slug: [category.path, file.path.replace(/\.md$/, "")],
         }))
     );
-    return paths;
 }
 
 async function getPageContent(slug: string[]) {
@@ -72,14 +72,20 @@ async function getPageContent(slug: string[]) {
         slug[0],
         `${slug[1]}.md`
     );
-    if (!fs.existsSync(filePath)) throw new Error("File not found");
+
+    if (!fs.existsSync(filePath)) {
+        throw new Error("File not found");
+    }
+
     const fileContent = fs.readFileSync(filePath, "utf-8");
     const { content } = matter(fileContent);
+
     const processed = await unified()
         .use(remarkParse)
         .use(remarkRehype)
         .use(rehypeStringify)
         .process(content);
+
     return processed.toString();
 }
 
@@ -88,8 +94,9 @@ export async function generateMetadata({
 }: {
     params: { slug: string[] };
 }): Promise<Metadata> {
+    // Можно расширить, подгружая frontmatter из файла
     return {
-        title: "Some title",
+        title: `Wiki - ${params.slug.join(" / ")}`,
     };
 }
 
@@ -100,17 +107,19 @@ interface PageProps {
 }
 
 export default async function WikiPage({ params }: PageProps) {
+    let html = "";
     try {
-        const html = await getPageContent(params.slug);
-        return (
-            <div style={{ display: "flex" }}>
-                <Sidebar data={wikiRoutes} />
-                <div style={{ padding: 24, maxWidth: 800 }}>
-                    <div dangerouslySetInnerHTML={{ __html: html }} />
-                </div>
-            </div>
-        );
+        html = await getPageContent(params.slug);
     } catch {
         return <NotFound />;
     }
+
+    return (
+        <div style={{ display: "flex" }}>
+            <Sidebar data={wikiRoutes} />
+            <div style={{ padding: 24, maxWidth: 800 }}>
+                <div dangerouslySetInnerHTML={{ __html: html }} />
+            </div>
+        </div>
+    );
 }
