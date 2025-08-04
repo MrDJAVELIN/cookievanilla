@@ -89,15 +89,15 @@ async function getPageContent(slug: string[]) {
 }
 
 interface PageProps {
-    params: {
-        slug: string[];
-    };
+    params: { slug: string[] | Promise<string[]> };
 }
 
 export default async function WikiPage({ params }: PageProps) {
+    const slug = await params.slug;
+
     let html = "";
     try {
-        html = await getPageContent(params.slug);
+        html = await getPageContent(slug);
     } catch {
         return <NotFound />;
     }
