@@ -92,11 +92,13 @@ export async function generateMetadata({
     return { title: `Wiki - ${title}` };
 }
 
-export default async function WikiPage({
-    params,
-}: {
-    params: { slug: string[] };
-}) {
+interface PageProps {
+    params: {
+        slug: string[];
+    };
+}
+
+export default async function WikiPage({ params }: PageProps) {
     try {
         const html = await getPageContent(params.slug);
         return (
