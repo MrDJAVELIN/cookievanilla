@@ -71,11 +71,7 @@ async function getPageContent(slug: string[]) {
         slug[0],
         `${slug[1]}.md`
     );
-
-    if (!fs.existsSync(filePath)) {
-        throw new Error("File not found");
-    }
-
+    if (!fs.existsSync(filePath)) throw new Error("File not found");
     const fileContent = fs.readFileSync(filePath, "utf-8");
     const { content } = matter(fileContent);
 
@@ -89,15 +85,36 @@ async function getPageContent(slug: string[]) {
 }
 
 interface PageProps {
-    params: { slug: string[] };
+    params: {
+        slug: string[];
+    };
+}
+
+export async function generateMetadata({
+    params,
+}: {
+    params: Promise<{ slug: string[] }>;
+}): Promise<Metadata> {
+    const resolvedParams = await params;
+    const slug = resolvedParams.slug;
+
+    const filePath = path.join(
+        process.cwd(),
+        "src/wiki",
+        slug[0],
+        `${slug[1]}.md`
+    );
+    if (!fs.existsSync(filePath)) {
+        return { title: "Страница не найдена" };
+    }
+
+    return { title: `Wiki: ${slug[1]}` };
 }
 
 export default async function WikiPage({ params }: PageProps) {
-    const slug = params.slug;
-
     let html = "";
     try {
-        html = await getPageContent(slug);
+        html = await getPageContent(params.slug);
     } catch {
         return <NotFound />;
     }
