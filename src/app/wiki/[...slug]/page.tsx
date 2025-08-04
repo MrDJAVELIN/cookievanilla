@@ -85,9 +85,7 @@ async function getPageContent(slug: string[]) {
 }
 
 interface PageProps {
-    params: {
-        slug: string[];
-    };
+    params: Promise<{ slug: string[] }>;
 }
 
 export async function generateMetadata({
@@ -112,9 +110,11 @@ export async function generateMetadata({
 }
 
 export default async function WikiPage({ params }: PageProps) {
+    const resolvedParams = await params;
+
     let html = "";
     try {
-        html = await getPageContent(params.slug);
+        html = await getPageContent(resolvedParams.slug);
     } catch {
         return <NotFound />;
     }
