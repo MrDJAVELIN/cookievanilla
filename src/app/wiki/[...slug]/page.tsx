@@ -89,11 +89,11 @@ async function getPageContent(slug: string[]) {
 }
 
 interface PageProps {
-    params: { slug: string[] | Promise<string[]> };
+    params: { slug: string[] };
 }
 
 export default async function WikiPage({ params }: PageProps) {
-    const slug = await params.slug;
+    const slug = params.slug;
 
     let html = "";
     try {
