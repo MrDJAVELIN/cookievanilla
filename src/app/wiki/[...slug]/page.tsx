@@ -56,7 +56,6 @@ const wikiRoutes = [
     },
 ];
 
-// Для генерации путей
 export async function generateStaticParams() {
     return wikiRoutes.flatMap((category) =>
         category.files.map((file) => ({
@@ -89,17 +88,6 @@ async function getPageContent(slug: string[]) {
     return processed.toString();
 }
 
-export async function generateMetadata({
-    params,
-}: {
-    params: { slug: string[] };
-}): Promise<Metadata> {
-    // Можно расширить, подгружая frontmatter из файла
-    return {
-        title: `Wiki - ${params.slug.join(" / ")}`,
-    };
-}
-
 interface PageProps {
     params: {
         slug: string[];
@@ -115,7 +103,7 @@ export default async function WikiPage({ params }: PageProps) {
     }
 
     return (
-        <div style={{ display: "flex" }}>
+        <div style={{ display: "flex" }} className="container">
             <Sidebar data={wikiRoutes} />
             <div style={{ padding: 24, maxWidth: 800 }}>
                 <div dangerouslySetInnerHTML={{ __html: html }} />
