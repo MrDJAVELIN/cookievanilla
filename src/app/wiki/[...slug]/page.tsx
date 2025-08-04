@@ -88,8 +88,9 @@ export async function generateMetadata({
 }: {
     params: { slug: string[] };
 }): Promise<Metadata> {
-    const title = params.slug.join(" / ");
-    return { title: `Wiki - ${title}` };
+    return {
+        title: "Some title",
+    };
 }
 
 interface PageProps {
