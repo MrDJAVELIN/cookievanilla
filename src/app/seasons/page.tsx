@@ -71,6 +71,9 @@ const Seasons = () => {
         <main>
             <section className="seasons container">
                 <div className="section__title seasons__title">Сезоны</div>
+                <div className="seasons__description">
+                    Миры прошлых сезонов Cookie Vanilla
+                </div>
                 <div className="seasons__list">
                     {seasons.map((season) => (
                         <Season

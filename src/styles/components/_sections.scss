@@ -2,6 +2,7 @@
     font-size: 2.6rem;
     font-weight: 700;
     text-align: center;
+    color: var(--accent-text);
 }
 
 .hero {
@@ -15,7 +16,7 @@
     border-bottom: 1px solid var(--background);
 
     &__content {
-        padding: 150px 0 75px 0;
+        padding: 140px 0 75px 0;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -72,7 +73,7 @@
             }
         }
 
-        &__season {
+        &__undertitle {
             font-size: 1.6rem;
             font-weight: 700;
             display: flex;
@@ -85,9 +86,10 @@
 
     &__words {
         font-size: 3.8rem;
-        font-weight: 1000;
+        font-weight: 800;
         width: 60%;
         line-height: 120%;
+        font-family: "Inter", sans-serif;
 
         & span {
             position: relative;
@@ -111,7 +113,7 @@
 
     &__description {
         font-size: 1.4rem;
-        font-family: "Roboto", sans-serif;
+        font-family: "Inter", sans-serif;
         font-weight: 400;
         color: var(--accent-text);
         width: 80%;
@@ -150,7 +152,7 @@
             font-size: 1.5rem;
             font-weight: 700;
             letter-spacing: 1.2px;
-            font-family: "Roboto", sans-serif;
+            font-family: "Inter", sans-serif;
             color: var(--text);
             display: flex;
             align-items: center;
@@ -229,6 +231,7 @@
     flex-direction: column;
     gap: 20px;
     padding: 50px 0 0 0;
+    font-family: "Poppins", sans-serif;
 
     position: relative;
 
@@ -354,6 +357,11 @@
 
 .seasons {
     position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
 
     &::before {
         content: "";
@@ -392,8 +400,17 @@
         gap: 25px;
     }
 
-    &__title {
+    &__description {
+        display: flex;
+        align-items: center;
+        justify-content: center;
         margin-bottom: 50px;
+
+        text-align: center;
+
+        font-family: "Inter", sans-serif;
+        font-size: 1.6rem;
+        color: var(--text);
     }
 }
 
@@ -468,8 +485,8 @@
     height: 100vh;
     overflow-y: auto;
     background-color: #fafafa;
-    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-        Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Arial,
+        sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
 }
 
 .sidebar h4 {

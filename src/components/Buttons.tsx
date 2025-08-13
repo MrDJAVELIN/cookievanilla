@@ -6,10 +6,8 @@ import EmptyButton from "./EmptyButton";
 import { Copy, ExternalLink } from "lucide-react";
 
 const Buttons = () => {
-    const ip = "cookiev.cv";
-
     function copyIp() {
-        var copyText = ip;
+        let copyText = "cookiev.cv";
 
         navigator.clipboard.writeText(copyText);
 
@@ -19,7 +17,7 @@ const Buttons = () => {
     return (
         <>
             <Button
-                text={ip}
+                text={"Скопировать IP"}
                 className="thovered"
                 icon={<Copy width={20} height={20} />}
                 onClick={() => {

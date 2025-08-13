@@ -27,9 +27,12 @@ const Home = () => {
                             <h1 className="hero__titles__title">
                                 Cookie Vanilla
                             </h1>
-                            <span className="hero__titles__season">
+                            <span className="hero__titles__undertitle">
                                 <CalendarClock width={25} height={25} /> ЛЕТНИЙ
                                 СЕЗОН
+                            </span>
+                            <span className="hero__titles__undertitle">
+                                Java 1.21.5
                             </span>
                         </div>
                         <div className="hero__container">

@@ -2,9 +2,15 @@ import type { Metadata } from "next";
 import "@/styles/main.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import { Poppins } from "next/font/google";
+import { Poppins, Inter } from "next/font/google";
 
 const poppins = Poppins({
+    subsets: ["latin"],
+    weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+    style: ["normal", "italic"],
+});
+
+const inter = Inter({
     subsets: ["latin"],
     weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
     style: ["normal", "italic"],
@@ -51,7 +57,7 @@ export default function RootLayout({
             <head>
                 <meta name="theme-color" content="#ff0000" />
             </head>
-            <body className={`${poppins.className}`}>
+            <body>
                 <Header />
                 {children}
                 <Footer />
