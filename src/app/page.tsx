@@ -28,11 +28,11 @@ const Home = () => {
                                 Cookie Vanilla
                             </h1>
                             <span className="hero__titles__undertitle">
-                                <CalendarClock width={25} height={25} /> ЛЕТНИЙ
+                                <CalendarClock width={25} height={25} /> ОСЕННИЙ
                                 СЕЗОН
                             </span>
                             <span className="hero__titles__undertitle">
-                                Java 1.21.8
+                                Java 1.21.9
                             </span>
                         </div>
                         <div className="hero__container">
@@ -52,9 +52,9 @@ const Home = () => {
                                     <Buttons />
                                 </div>
                             </div>
-                            <div className="hero__right">
+                            {/* <div className="hero__right">
                                 <PlayerList />
-                            </div>
+                            </div> */}
                         </div>
                     </div>
                 </section>

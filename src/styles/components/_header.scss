@@ -98,10 +98,10 @@
         &::after {
             content: "";
             position: absolute;
-            bottom: -10px;
+            bottom: -5px;
             left: 50%;
             transform: translate(-50%);
-            width: 70%;
+            width: 0%;
             height: 2px;
             opacity: 0;
             background: var(--text);

@@ -1,6 +1,6 @@
 :root {
   --red: #ff0000;
-  --accent-red: #d41717;
+  --accent-red: #e91818;
   --accent-red-hover: #bd1515;
   --accent-red-transparent: #ff0000a2;
   --gray: #303030;
@@ -92,10 +92,10 @@
 .header-content__nav ul li a::after {
   content: "";
   position: absolute;
-  bottom: -10px;
+  bottom: -5px;
   left: 50%;
   transform: translate(-50%);
-  width: 70%;
+  width: 0%;
   height: 2px;
   opacity: 0;
   background: var(--text);
@@ -139,15 +139,16 @@
 .hero__container {
   display: flex;
   align-items: start;
-  justify-content: space-between;
+  justify-content: center;
 }
 .hero__left {
   display: flex;
-  align-items: start;
+  align-items: center;
   justify-content: center;
   flex-direction: column;
   gap: 40px;
-  width: 100%;
+  width: 70%;
+  text-align: center;
 }
 .hero__titles {
   display: flex;
@@ -209,12 +210,11 @@
   z-index: -1;
 }
 .hero__description {
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   font-family: "Inter", sans-serif;
   font-weight: 400;
   color: var(--accent-text);
   width: 80%;
-  text-align: left;
 }
 .hero .playerlist {
   display: flex;
@@ -423,9 +423,9 @@
   font-size: 1.1rem;
 }
 
-.builds,
-.seasons {
-  padding-top: 160px;
+.seasons,
+.wiki {
+  padding-top: 100px;
 }
 
 .seasons {
@@ -495,10 +495,7 @@
   min-height: 450px;
 }
 .season:hover {
-  background: rgba(255, 255, 255, 0.0823529412);
   border: 1px solid var(--border-hover);
-  border-radius: 35px;
-  transform: scale(1.02);
 }
 .season img {
   height: 150px;
@@ -540,17 +537,18 @@
 .sidebar {
   width: 250px;
   padding: 1rem;
-  border-right: 1px solid #ddd;
   height: 100vh;
-  overflow-y: auto;
-  background-color: #fafafa;
+  overflow-y: hidden;
   font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+  position: sticky;
+  top: 100px;
+  z-index: 1;
 }
 
 .sidebar h4 {
   font-size: 1rem;
   margin-bottom: 0.5rem;
-  color: #333;
+  color: var(--accent-text);
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
@@ -570,25 +568,85 @@
   display: block;
   padding: 6px 10px;
   border-radius: 6px;
-  color: #444;
+  color: var(--text);
   text-decoration: none;
   transition: background-color 0.2s ease, font-weight 0.2s ease;
   cursor: pointer;
 }
 
-.sidebar a:hover {
-  background-color: #e6f0ff;
+.sidebar .active {
+  background-color: var(--background);
+  border-radius: 10px;
+  font-weight: 700;
+  color: var(--accent-red);
 }
 
-.sidebar a.active {
-  background-color: #d0e2ff;
+.wiki {
+  display: flex;
+  gap: 32px;
+  min-height: 80vh;
+  border-radius: 12px;
+}
+
+.wiki__content {
+  padding: 24px;
+  max-width: 800px;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  line-height: 1.7;
+}
+
+.wiki__content h1,
+.wiki__content h2,
+.wiki__content h3 {
+  margin-top: 1.5em;
+  margin-bottom: 0.5em;
   font-weight: 700;
-  color: #1a73e8;
+}
+
+.wiki__content h1 {
+  margin-top: 0em;
+}
+
+.wiki__content a {
+  color: var(--accent-red);
+  text-decoration: underline;
+}
+
+.wiki__content p {
+  margin-bottom: 1em;
+}
+
+.wiki__content ul,
+.wiki__content ol {
+  margin-left: 1.5em;
+  margin-bottom: 1em;
+}
+
+.wiki__content code {
+  background: rgba(255, 255, 255, 0.1450980392);
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 0.95em;
+}
+
+.wiki__content pre {
+  background: rgba(255, 255, 255, 0.1450980392);
+  padding: 12px;
+  border-radius: 6px;
+  overflow-x: auto;
+  margin-bottom: 1em;
+}
+
+.wiki__content .emoji {
+  font-size: 1.3em;
+  vertical-align: middle;
+  margin-right: 0.2em;
 }
 
 :root {
   --red: #ff0000;
-  --accent-red: #d41717;
+  --accent-red: #e91818;
   --accent-red-hover: #bd1515;
   --accent-red-transparent: #ff0000a2;
   --gray: #303030;
@@ -958,9 +1016,6 @@ main {
 
 .thovered {
   transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
-}
-.thovered:hover {
-  transform: scale(1.005);
 }
 .thovered:active {
   transform: scale(1);

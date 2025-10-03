@@ -120,11 +120,15 @@ export default async function WikiPage({ params }: PageProps) {
     }
 
     return (
-        <div style={{ display: "flex" }} className="container">
-            <Sidebar data={wikiRoutes} />
-            <div style={{ padding: 24, maxWidth: 800 }}>
-                <div dangerouslySetInnerHTML={{ __html: html }} />
-            </div>
-        </div>
+        <main>
+            <section className="container wiki">
+                <div style={{ display: "flex" }} className="">
+                    <Sidebar data={wikiRoutes} />
+                    <div className="wiki__content">
+                        <div dangerouslySetInnerHTML={{ __html: html }} />
+                    </div>
+                </div>
+            </section>
+        </main>
     );
 }

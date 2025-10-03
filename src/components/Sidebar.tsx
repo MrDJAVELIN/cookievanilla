@@ -15,15 +15,7 @@ export default function Sidebar({ data }: { data: SidebarProps["data"] }) {
     const pathname = usePathname();
 
     return (
-        <aside
-            style={{
-                width: 250,
-                padding: "1rem",
-                borderRight: "1px solid #ddd",
-                height: "100vh",
-                overflowY: "auto",
-            }}
-        >
+        <aside className="sidebar">
             {data.map((category, idx) => (
                 <div key={idx} style={{ marginBottom: "1.5rem" }}>
                     <h4 style={{ fontSize: "1rem", marginBottom: "0.5rem" }}>
@@ -43,18 +35,7 @@ export default function Sidebar({ data }: { data: SidebarProps["data"] }) {
                                 >
                                     <Link href={fullPath}>
                                         <span
-                                            style={{
-                                                padding: "4px 8px",
-                                                display: "block",
-                                                borderRadius: 6,
-                                                background: isActive
-                                                    ? "#eee"
-                                                    : "transparent",
-                                                fontWeight: isActive
-                                                    ? "bold"
-                                                    : "normal",
-                                                transition: "background 0.2s",
-                                            }}
+                                            className={isActive ? "active" : ""}
                                         >
                                             {file.name}
                                         </span>

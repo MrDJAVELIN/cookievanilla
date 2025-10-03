@@ -122,9 +122,6 @@ main {
 .thovered {
     transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
 
-    &:hover {
-        transform: scale(1.005);
-    }
     &:active {
         transform: scale(1);
     }
