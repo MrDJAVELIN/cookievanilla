@@ -55,9 +55,9 @@ const Header = () => {
                             <li className="thovered">
                                 <Link href="/#">Главная</Link>
                             </li>
-                            <li className="thovered">
+                            {/* <li className="thovered">
                                 <Link href="/seasons">Сезоны</Link>
-                            </li>
+                            </li> */}
                             <li className="thovered">
                                 <Link
                                     href="https://shop.cookiev.cv/"
