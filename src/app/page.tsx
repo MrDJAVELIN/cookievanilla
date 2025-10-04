@@ -32,7 +32,7 @@ const Home = () => {
                                 СЕЗОН
                             </span>
                             <span className="hero__titles__undertitle">
-                                Java 1.21.9
+                                Java 1.21.8
                             </span>
                         </div>
                         <div className="hero__container">
