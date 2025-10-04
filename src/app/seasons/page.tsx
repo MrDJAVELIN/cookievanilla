@@ -75,7 +75,8 @@ const Seasons = () => {
                     Миры прошлых сезонов Cookie Vanilla
                 </div>
                 <div className="seasons__list">
-                    {seasons.map((season) => (
+                    <h2>Временно не доступно</h2>
+                    /* {seasons.map((season) => (
                         <Season
                             key={season.name}
                             name={season.name}
@@ -85,7 +86,7 @@ const Seasons = () => {
                             size={season.size}
                             link={season.link}
                         />
-                    ))}
+                    ))} */
                 </div>
             </section>
         </main>
