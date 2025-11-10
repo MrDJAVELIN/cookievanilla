@@ -28,7 +28,7 @@ const Home = () => {
                                 Cookie Vanilla
                             </h1>
                             <span className="hero__titles__undertitle">
-                                <CalendarClock width={25} height={25} /> ОСЕННИЙ
+                                <CalendarClock width={25} height={25} /> 7
                                 СЕЗОН
                             </span>
                             <span className="hero__titles__undertitle">
